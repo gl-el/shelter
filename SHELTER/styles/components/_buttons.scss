@@ -1,0 +1,12 @@
+.btn-rounded {
+  padding: 13px 43px;
+  border-radius: 100px;
+  box-sizing: border-box;
+  border: 2px solid $color-primary;
+  color: $color-dark-2xl;
+  @extend %text-btn;
+
+  &-colored {
+    background-color: $color-primary;
+  }
+}

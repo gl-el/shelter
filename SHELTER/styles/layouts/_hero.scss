@@ -1,0 +1,20 @@
+.hero {
+  background: url(/SHELTER/assets/images/noise_lines_transparent@2X.png), $start-screen-gradient;
+  padding: 60px 0 0;
+
+  &__wrapper {
+    margin-top: 60px;
+    gap: 42px;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    max-width: 460px;
+    margin-bottom: 81px;
+    color: $color-light-xl;
+
+    .text-l {
+      margin: 42px 0;
+    }
+  }
+}

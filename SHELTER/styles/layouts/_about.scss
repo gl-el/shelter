@@ -1,0 +1,19 @@
+.about {
+  margin: 80px 0 100px;
+
+  &__wrapper {
+    gap: 120px;
+  }
+
+  &__content {
+    max-width: 430px;
+
+    h3 {
+      max-width: 370px;
+    }
+
+    .text-l {
+      margin-top: 24px;
+    }
+  }
+}

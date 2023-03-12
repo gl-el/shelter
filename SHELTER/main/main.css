@@ -45,6 +45,7 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
+  letter-spacing: 0.06em;
 }
 
 h4 {
@@ -146,6 +147,22 @@ h5 {
 }
 .hero__content .text-l {
   margin: 42px 0;
+}
+
+.about {
+  margin: 80px 0 100px;
+}
+.about__wrapper {
+  gap: 120px;
+}
+.about__content {
+  max-width: 430px;
+}
+.about__content h3 {
+  max-width: 370px;
+}
+.about__content .text-l {
+  margin-top: 24px;
 }
 
 .logo {

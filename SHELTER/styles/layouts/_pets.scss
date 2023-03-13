@@ -8,7 +8,11 @@
 
   &__wrapper {
     padding: 80px 0 100px;
-    gap: 61px;
+    gap: 59px;
+
+    .btn {
+      margin-top: 1px;
+    }
   }
 
   &__content {
@@ -17,9 +21,21 @@
     justify-content: space-between;
     gap: 53px;
   }
+
 }
 
-.cards__wrapper {
+.pets-card {
+  gap: 31px;
+  color: $color-dark-l;
+  background-color: $color-light-s;
+  padding-bottom: 30px;
+  border-radius: 9px 9px 0 0;
+  &__img {
+    border-radius: 9px 9px 0 0;
+  }
+}
+
+.pets-cards__wrapper {
   display: flex;
   gap: 90px;
 }

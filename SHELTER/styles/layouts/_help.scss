@@ -1,0 +1,27 @@
+.help {
+  color: $color-dark-l;
+
+  h3 {
+    max-width: 310px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    padding: 81px 0 100px;
+    gap: 58px;
+  }
+
+  &-cards {
+    padding: 0 85px;
+    gap: 120px;
+    row-gap: 55px;
+  }
+
+  &-card {
+    gap: 30px;
+
+    &__img {
+      height: 60px;
+    }
+  }
+}

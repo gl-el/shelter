@@ -1,0 +1,25 @@
+.pets {
+  background-color: $color-light-l;
+
+  h3 {
+    color: $color-dark-l;
+    text-align: center;
+  }
+
+  &__wrapper {
+    padding: 80px 0 100px;
+    gap: 61px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 53px;
+  }
+}
+
+.cards__wrapper {
+  display: flex;
+  gap: 90px;
+}

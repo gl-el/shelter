@@ -45,6 +45,11 @@ h5 {
   @include font(1.5rem, 110%);
 }
 
+h6 {
+  @include font(2rem, 100%);
+  letter-spacing: 0.06em;
+}
+
 .text-l {
   @include font(1.5rem, 160%);
 }

@@ -1,12 +1,34 @@
-.btn-rounded {
-  padding: 13px 43px;
-  border-radius: 100px;
+.btn {
   box-sizing: border-box;
   border: 2px solid $color-primary;
   color: $color-dark-2xl;
+  background-color: transparent;
   @extend %text-btn;
 
-  &-colored {
-    background-color: $color-primary;
+  &-round {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &_right {
+      transform: rotate(180deg);
+    }
+
+    &__arrow {
+      width: 14px;
+      height: 6px;
+    }
+  }
+
+  &-rounded {
+    padding: 14px 44px;
+    border-radius: 100px;
+
+    &-colored {
+      background-color: $color-primary;
+    }
   }
 }

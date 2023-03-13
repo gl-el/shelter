@@ -183,9 +183,11 @@ h6 {
 }
 .about__content h3 {
   max-width: 370px;
+  color: #545454;
 }
 .about__content .text-l {
   margin-top: 24px;
+  color: #4C4C4C;
 }
 
 .pets {

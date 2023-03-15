@@ -1,4 +1,8 @@
 .header {
+  position: absolute;
+  width: 1200px;
+  left: calc((100vw - $desktop-width + 60px) /2);
+  top: 60px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -10,7 +14,7 @@
       padding: 0;
       list-style: none;
       display: flex;
-      gap: 36px;
+      gap: 35px;
     }
 
     &__item {

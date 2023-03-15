@@ -1,0 +1,70 @@
+html {
+  font-size: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %font-georgia;
+}
+
+.subtitle,
+.text-l,
+.text-s,
+.text-mobile-menu {
+  @extend %font-arial;
+}
+
+
+h1 {
+  @include font(3.2rem, 110%);
+  letter-spacing: 0.06em;
+}
+
+.subtitle {
+  @include font(1.3rem, 1.5rem);
+}
+
+h2 {
+  @include font(4.4rem, 130%);
+}
+
+h3 {
+  @include font(3.5rem, 130%);
+  letter-spacing: 0.06em;
+}
+
+h4 {
+  @include font(2rem, 115%);
+  letter-spacing: 0.06em;
+}
+
+h5 {
+  @include font(1.5rem, 110%);
+}
+
+h6 {
+  @include font(2rem, 100%);
+  letter-spacing: 0.06em;
+}
+
+.text-l {
+  @include font(1.5rem, 160%);
+}
+
+.text-s {
+  @include font(1.2rem, 150%);
+}
+
+.text-mobile-menu {
+  @include font(3.2rem, 160%);
+}
+
+%text-btn {
+  @extend %font-georgia;
+  @include font(1.7rem, 130%);
+  letter-spacing: 0.06em;
+}

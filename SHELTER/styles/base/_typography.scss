@@ -1,70 +1,55 @@
-html {
-  font-size: 10px;
+@font-face {
+  font-family: 'Arial';
+  src: url(../../assets/fonts/ArialMT.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend %font-georgia;
+@font-face {
+  font-family: 'Arial';
+  src: url(../../assets/fonts/ArialMT.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
-.subtitle,
-.text-l,
-.text-s,
-.text-mobile-menu {
-  @extend %font-arial;
+@font-face {
+  font-family: 'Arial';
+  src: url(../../assets/fonts/Arial-ItalicMT.woff) format('woff');
+  font-weight: 400;
+  font-style: italic;
 }
 
-
-h1 {
-  @include font(3.2rem, 110%);
-  letter-spacing: 0.06em;
+@font-face {
+  font-family: 'Arial';
+  src: url(../../assets/fonts/Arial-ItalicMT.woff2) format('woff2');
+  font-weight: 400;
+  font-style: italic;
 }
 
-.subtitle {
-  @include font(1.3rem, 1.5rem);
+@font-face {
+  font-family: 'Georgia';
+  src: url(../../assets/fonts/Georgia.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
-h2 {
-  @include font(4.4rem, 130%);
+@font-face {
+  font-family: 'Georgia';
+  src: url(../../assets/fonts/Georgia.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
-h3 {
-  @include font(3.5rem, 130%);
-  letter-spacing: 0.06em;
+@font-face {
+  font-family: 'Georgia';
+  src: url(../../assets/fonts/Georgia-Bold.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 
-h4 {
-  @include font(2rem, 115%);
-  letter-spacing: 0.06em;
-}
-
-h5 {
-  @include font(1.5rem, 110%);
-}
-
-h6 {
-  @include font(2rem, 100%);
-  letter-spacing: 0.06em;
-}
-
-.text-l {
-  @include font(1.5rem, 160%);
-}
-
-.text-s {
-  @include font(1.2rem, 150%);
-}
-
-.text-mobile-menu {
-  @include font(3.2rem, 160%);
-}
-
-%text-btn {
-  @extend %font-georgia;
-  @include font(1.7rem, 130%);
-  letter-spacing: 0.06em;
+@font-face {
+  font-family: 'Georgia';
+  src: url(../../assets/fonts/Georgia-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }

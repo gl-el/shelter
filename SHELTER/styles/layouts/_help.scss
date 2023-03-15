@@ -12,16 +12,11 @@
   }
 
   &-cards {
-    padding: 0 85px;
     gap: 120px;
     row-gap: 55px;
   }
 
   &-card {
     gap: 30px;
-
-    &__img {
-      height: 60px;
-    }
   }
 }

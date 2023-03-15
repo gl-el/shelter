@@ -10,7 +10,8 @@ h6 {
 .subtitle,
 .text-l,
 .text-s,
-.text-mobile-menu {
+.text-mobile-menu,
+.text-italic {
   font-family: "Arial", Helvetica, sans-serif;
 }
 
@@ -109,6 +110,7 @@ h5 {
   font-style: normal;
   font-weight: 400;
   line-height: 110%;
+  letter-spacing: 0.06em;
 }
 
 h6 {
@@ -138,6 +140,13 @@ h6 {
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
+}
+
+.text-italic {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.8rem;
 }
 
 .btn {
@@ -296,6 +305,39 @@ h6 {
 }
 .help-card {
   gap: 30px;
+}
+
+.donation {
+  color: #545454;
+}
+.donation__wrapper {
+  padding: 80px 0 100px;
+  gap: 31px;
+}
+.donation__content {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.donation__content a {
+  color: #545454;
+  text-decoration: none;
+}
+.donation__content h3 {
+  max-width: 300px;
+}
+.donation__card {
+  padding: 10px 15px;
+  max-width: 349px;
+  box-sizing: border-box;
+  background-color: hsl(25, 69%, 82%);
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+.donation__legal {
+  color: #B2B2B2;
 }
 
 .logo {

@@ -14,7 +14,8 @@ h6 {
 .subtitle,
 .text-l,
 .text-s,
-.text-mobile-menu {
+.text-mobile-menu,
+.text-italic {
   @extend %font-arial;
 }
 
@@ -44,6 +45,7 @@ h4 {
 
 h5 {
   @include font(1.5rem, 110%);
+  letter-spacing: 0.06em;
 }
 
 h6 {
@@ -61,6 +63,10 @@ h6 {
 
 .text-mobile-menu {
   @include font(3.2rem, 160%);
+}
+
+.text-italic {
+  @include font(1.2rem, 1.8rem, 400, italic);
 }
 
 %text-btn {

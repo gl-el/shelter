@@ -12,5 +12,11 @@ body {
 }
 
 .nav__link {
-  color: $color-light-s;
+  color: $color-dark-s;
+  &_active {
+    color: $color-light-xl;
+  }
+  &:hover {
+    color: $color-light-xl;
+  }
 }

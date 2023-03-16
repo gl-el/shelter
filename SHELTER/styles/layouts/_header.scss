@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
- padding: 60px 0 0;
+  padding: 60px 0 0;
 
   .nav {
     margin-left: auto;
@@ -14,16 +14,18 @@
       gap: 35px;
     }
 
-    &__item {
+    &__link{
       border-bottom: 3px solid transparent;
 
       &_active {
+        pointer-events: none;
+        border-bottom: 3px solid $color-primary;
+      }
+
+      &:active {
         border-bottom: 3px solid $color-primary;
       }
     }
 
-    &__link {
-      text-decoration: none;
-    }
   }
 }

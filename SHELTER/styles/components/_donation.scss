@@ -31,9 +31,15 @@
     border-radius: 9px;
     display: flex;
     justify-content: space-between;
+    @extend %transition;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
   }
 
   &__legal {
     color: $color-dark-m;
   }
+
 }

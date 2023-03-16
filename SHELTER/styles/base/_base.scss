@@ -1,5 +1,11 @@
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  @extend %transition;
 }
 
 h1,
@@ -73,8 +79,4 @@ h6 {
   @extend %font-georgia;
   @include font(1.7rem, 130%);
   letter-spacing: 0.06em;
-}
-
-a {
-  text-decoration: none;
 }

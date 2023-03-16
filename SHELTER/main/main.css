@@ -15,6 +15,10 @@ h6 {
   font-family: "Arial", Helvetica, sans-serif;
 }
 
+.donation__card, .pets-card, .btn, a {
+  transition: all 0.5s ease-in-out;
+}
+
 @font-face {
   font-family: "Arial";
   src: url(../../assets/fonts/ArialMT.woff) format("woff");
@@ -65,6 +69,11 @@ h6 {
 }
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
@@ -157,10 +166,6 @@ h6 {
   letter-spacing: 0.06em;
 }
 
-a {
-  text-decoration: none;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -213,139 +218,15 @@ a {
   display: flex;
   gap: 35px;
 }
-.header .nav__item {
+.header .nav__link {
   border-bottom: 3px solid transparent;
 }
-.header .nav__item_active {
+.header .nav__link_active {
+  pointer-events: none;
   border-bottom: 3px solid #F1CDB3;
 }
-.header .nav__link {
-  text-decoration: none;
-}
-
-.hero__wrapper {
-  margin-top: 60px;
-  gap: 41px;
-  flex-wrap: wrap;
-}
-.hero__content {
-  max-width: 460px;
-  margin-bottom: 81px;
-  color: #FFFFFF;
-}
-.hero__content .text-l {
-  margin: 42px 0;
-}
-
-.about {
-  background-color: #FFFFFF;
-}
-.about__wrapper {
-  padding: 80px 0 100px;
-  gap: 120px;
-}
-.about__content {
-  max-width: 430px;
-}
-.about__content h3 {
-  max-width: 370px;
-  color: #545454;
-}
-.about__content .text-l {
-  margin-top: 24px;
-  color: #4C4C4C;
-}
-
-.pets {
-  background-color: #F6F6F6;
-}
-.pets h3 {
-  color: #545454;
-  text-align: center;
-}
-.pets__wrapper {
-  padding: 81px 0 100px;
-  gap: 58px;
-}
-.pets__wrapper .btn {
-  margin-top: 1px;
-}
-.pets__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 53px;
-}
-
-.pets-card {
-  gap: 31px;
-  color: #545454;
-  background-color: #FAFAFA;
-  padding-bottom: 30px;
-  border-radius: 9px 9px 0 0;
-}
-.pets-card__img {
-  border-radius: 9px 9px 0 0;
-}
-
-.pets-cards__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 90px;
-}
-
-.help {
-  color: #545454;
-  background-color: #FFFFFF;
-}
-.help h3 {
-  max-width: 310px;
-  text-align: center;
-}
-.help__wrapper {
-  padding: 82px 0 100px;
-  gap: 58px;
-}
-.help-cards {
-  gap: 120px;
-  row-gap: 55px;
-}
-.help-card {
-  gap: 30px;
-}
-
-.donation {
-  color: #545454;
-  background-color: #F6F6F6;
-}
-.donation__wrapper {
-  padding: 80px 0 99px;
-  gap: 31px;
-}
-.donation__content {
-  max-width: 380px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.donation__content a {
-  color: #545454;
-  text-decoration: none;
-}
-.donation__content h3 {
-  max-width: 300px;
-}
-.donation__card {
-  padding: 10px 15px;
-  max-width: 349px;
-  box-sizing: border-box;
-  background-color: #F1CDB3;
-  border-radius: 9px;
-  display: flex;
-  justify-content: space-between;
-}
-.donation__legal {
-  color: #B2B2B2;
+.header .nav__link:active {
+  border-bottom: 3px solid #F1CDB3;
 }
 
 .footer {
@@ -407,6 +288,9 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
+.footer__item h4:hover {
+  color: hsl(25, 93%, 88%);
+}
 .footer__locations {
   margin-right: 21px;
 }
@@ -432,6 +316,10 @@ a {
   color: #444444;
   background-color: transparent;
 }
+.btn:hover {
+  cursor: pointer;
+  border: 2px solid hsl(25, 93%, 88%);
+}
 .btn-round {
   width: 52px;
   height: 52px;
@@ -439,6 +327,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.btn-round:hover {
+  background-color: hsl(25, 93%, 88%);
 }
 .btn-round_right {
   transform: rotate(180deg);
@@ -451,8 +342,148 @@ a {
   padding: 13px 43px;
   border-radius: 100px;
 }
-.btn-rounded-colored {
+.btn-rounded_colored {
   background-color: #F1CDB3;
+}
+.btn-rounded_colored:hover {
+  background-color: hsl(25, 93%, 88%);
+}
+
+.hero__wrapper {
+  margin-top: 60px;
+  gap: 41px;
+  flex-wrap: wrap;
+}
+.hero__content {
+  max-width: 460px;
+  margin-bottom: 81px;
+  color: #FFFFFF;
+}
+.hero__content .text-l {
+  margin: 42px 0;
+}
+
+.about {
+  background-color: #FFFFFF;
+}
+.about__wrapper {
+  padding: 80px 0 100px;
+  gap: 120px;
+}
+.about__content {
+  max-width: 430px;
+}
+.about__content h3 {
+  max-width: 370px;
+  color: #545454;
+}
+.about__content .text-l {
+  margin-top: 24px;
+  color: #4C4C4C;
+}
+
+.pets {
+  background-color: #F6F6F6;
+}
+.pets h3 {
+  color: #545454;
+  text-align: center;
+}
+.pets__wrapper {
+  padding: 81px 0 100px;
+  gap: 58px;
+}
+.pets__wrapper .btn {
+  margin-top: 1px;
+}
+.pets__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 53px;
+}
+
+.pets-card {
+  gap: 31px;
+  color: #545454;
+  background-color: #FAFAFA;
+  padding-bottom: 30px;
+  border-radius: 9px;
+}
+.pets-card:hover {
+  cursor: pointer;
+  background-color: #F6F6F6;
+  box-shadow: 5px 5px 20px 10px rgba(13, 13, 13, 0.04);
+}
+.pets-card:hover > .btn {
+  border: 2px solid hsl(25, 93%, 88%);
+  background-color: hsl(25, 93%, 88%);
+}
+.pets-card__img {
+  border-radius: 9px 9px 0 0;
+}
+
+.pets-cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
+}
+
+.help {
+  color: #545454;
+  background-color: #FFFFFF;
+}
+.help h3 {
+  max-width: 310px;
+  text-align: center;
+}
+.help__wrapper {
+  padding: 82px 0 100px;
+  gap: 58px;
+}
+.help-cards {
+  gap: 120px;
+  row-gap: 55px;
+}
+.help-card {
+  gap: 30px;
+}
+
+.donation {
+  color: #545454;
+  background-color: #F6F6F6;
+}
+.donation__wrapper {
+  padding: 80px 0 99px;
+  gap: 31px;
+}
+.donation__content {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.donation__content a {
+  color: #545454;
+  text-decoration: none;
+}
+.donation__content h3 {
+  max-width: 300px;
+}
+.donation__card {
+  padding: 10px 15px;
+  max-width: 349px;
+  box-sizing: border-box;
+  background-color: #F1CDB3;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+.donation__card:hover {
+  background-color: hsl(25, 93%, 88%);
+}
+.donation__legal {
+  color: #B2B2B2;
 }
 
 body {
@@ -467,5 +498,11 @@ body {
 }
 
 .nav__link {
-  color: #FAFAFA;
+  color: #CDCDCD;
+}
+.nav__link_active {
+  color: #FFFFFF;
+}
+.nav__link:hover {
+  color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */

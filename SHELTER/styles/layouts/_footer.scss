@@ -72,6 +72,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    h4:hover {
+      color: $color-primary-light;
+    }
   }
 
   &__locations {

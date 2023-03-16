@@ -199,14 +199,10 @@ a {
 }
 
 .header {
-  position: absolute;
-  width: 1200px;
-  max-width: 1200px;
-  left: calc((100vw - 1280px + 60px) / 2);
-  top: 60px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding: 60px 0 0;
 }
 .header .nav {
   margin-left: auto;
@@ -227,10 +223,6 @@ a {
   text-decoration: none;
 }
 
-.hero {
-  background: url(/SHELTER/assets/images/noise_lines_transparent@2X.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-  padding: 120px 0 0;
-}
 .hero__wrapper {
   margin-top: 60px;
   gap: 41px;
@@ -246,9 +238,10 @@ a {
 }
 
 .about {
-  margin: 80px 0 100px;
+  background-color: #FFFFFF;
 }
 .about__wrapper {
+  padding: 80px 0 100px;
   gap: 120px;
 }
 .about__content {
@@ -303,6 +296,7 @@ a {
 
 .help {
   color: #545454;
+  background-color: #FFFFFF;
 }
 .help h3 {
   max-width: 310px;
@@ -459,6 +453,10 @@ a {
 }
 .btn-rounded-colored {
   background-color: #F1CDB3;
+}
+
+body {
+  background: url(/SHELTER/assets/images/noise_lines_transparent@2X.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .logo h1 {

@@ -1,0 +1,24 @@
+.logo {
+  h1 {
+    color: $color-dark-l;
+  }
+  p {
+    color: $color-dark-3xl;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: $color-light-xl;
+}
+
+.nav__link {
+  color: $color-dark-l;
+  &_active {
+    color: $color-dark-3xl;
+  }
+  &:hover {
+    color: $color-dark-3xl;
+  }
+}

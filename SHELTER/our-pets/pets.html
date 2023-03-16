@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="image/png" sizes="120x120" rel="icon" href="/SHELTER/assets/favicon.png">
   <link rel="stylesheet" href="./pets.css">
   <title>Cozy House</title>
 </head>
+
 <body>
-  <header class="header wrapper">
+  <header>
+    <div class="header wrapper">
     <a href="#">
       <div class="logo">
         <h1>Cozy House</h1>
@@ -18,15 +22,70 @@
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item text-l"><a href="/SHELTER/main/main.html" class="nav__link">About the shelter</a></li>
-        <li class="nav__item nav__item_active text-l"><a href="/SHELTER/our-pets/pets.html" class="nav__link nav__link_active">Our pets</a></li>
+        <li class="nav__item nav__item_active text-l"><a href="/SHELTER/our-pets/pets.html"
+            class="nav__link nav__link_active">Our pets</a></li>
         <li class="nav__item text-l"><a href="#help" class="nav__link">Help the shelter</a></li>
         <li class="nav__item text-l"><a href="#footer" class="nav__link">Contacts</a></li>
       </ul>
     </nav>
+    </div>
   </header>
   <main>
     <section class="gallery">
-      <h1>Our friends who are looking for a house</h1>
+      <div class="gallery__wrapper wrapper layout-column">
+        <h3>Our friends who<br>are looking for a house</h3>
+        <div class="gallery-cards__wrapper layout-rows">
+          <div class="card layout-column">
+            <img class="card__img" src="../assets/images/katrine.png" alt="pet">
+            <h6>Katrine</h6>
+            <button class="btn btn-rounded">Learn more</button>
+          </div>
+          <div class="card layout-column">
+            <img class="card__img" src="../assets/images/jennifer.png" alt="pet">
+            <h6>Jennifer</h6>
+            <button class="btn btn-rounded">Learn more</button>
+          </div>
+          <div class="card layout-column">
+            <img class="card__img" src="../assets/images/woody.png" alt="pet">
+            <h6>Woody</h6>
+            <button class="btn btn-rounded">Learn more</button>
+          </div>
+          <div class="card layout-column">
+            <img class="card__img" src="../assets/images/sophia.png" alt="pet">
+            <h6>Sophia</h6>
+            <button class="btn btn-rounded">Learn more</button>
+          </div>
+          <div class="card layout-column">
+            <img class="card__img" src="../assets/images/pets-timmy.png" alt="pet">
+            <h6>Timmy</h6>
+            <button class="btn btn-rounded">Learn more</button>
+          </div>
+          <div class="card layout-column">
+            <img class="card__img" src="../assets/images/charlie.png" alt="pet">
+            <h6>Charly</h6>
+            <button class="btn btn-rounded">Learn more</button>
+          </div>
+          <div class="card layout-column">
+            <img class="card__img" src="../assets/images/scarlett.png" alt="pet">
+            <h6>Scarlett</h6>
+            <button class="btn btn-rounded">Learn more</button>
+          </div>
+          <div class="card layout-column">
+            <img class="card__img" src="../assets/images/freddie.png" alt="pet">
+            <h6>Freddie</h6>
+            <button class="btn btn-rounded">Learn more</button>
+          </div>
+        </div>
+        <div class="gallery__nav layout-rows">
+          <button class="btn btn-round btn-round_inactive" id="first">&lt;&lt;</button>
+          <button class="btn btn-round btn-round_inactive" id="prev">&lt;</button>
+          <div class="gallery__counter">
+            <h4>1</h4>
+          </div>
+          <button class="btn btn-round" id="first">&gt;</button>
+          <button class="btn btn-round" id="prev">&gt;&gt;</button>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer" id="footer">
@@ -43,12 +102,17 @@
         </div>
         <div class="footer__item footer__locations">
           <h3>We are waiting for your visit</h3>
-          <a class="footer__adr" href="https://goo.gl/maps/xR8bFzMPAyPipwTT7" target="_blank"><h4 >1 Central Street, Boston (entrance from the store)</h4></a>
-          <a class="footer__adr" href="https://goo.gl/maps/9Pp2B2g3EDbo9kk2A" target="_blank"><h4>18 South Park, London </h4></a>
+          <a class="footer__adr" href="https://goo.gl/maps/xR8bFzMPAyPipwTT7" target="_blank">
+            <h4>1 Central Street, Boston (entrance from the store)</h4>
+          </a>
+          <a class="footer__adr" href="https://goo.gl/maps/9Pp2B2g3EDbo9kk2A" target="_blank">
+            <h4>18 South Park, London </h4>
+          </a>
         </div>
         <img class="footer__img" src="../assets/images/footer-puppy.png" alt="puppy">
       </div>
     </div>
   </footer>
 </body>
+
 </html>

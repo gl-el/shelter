@@ -23,6 +23,12 @@
       background-color: $color-primary-light;
     }
 
+    &_inactive {
+      pointer-events: none;
+      color: $color-dark-s;
+      border: 2px solid $color-dark-s;
+    }
+
     &_right {
       transform: rotate(180deg);
     }

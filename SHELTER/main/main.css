@@ -245,7 +245,6 @@ h6 {
 }
 .footer a {
   position: relative;
-  padding-left: 60px;
 }
 .footer__adr {
   padding-left: 40px;
@@ -259,6 +258,9 @@ h6 {
   left: -1px;
   top: 6px;
 }
+.footer__mail {
+  padding-left: 60px;
+}
 .footer__mail::before {
   content: url(/SHELTER/assets/icons/icon-email.svg);
   display: block;
@@ -267,6 +269,9 @@ h6 {
   position: absolute;
   left: 0px;
   top: 6px;
+}
+.footer__tel {
+  padding-left: 60px;
 }
 .footer__tel::before {
   content: url(/SHELTER/assets/icons/icon-phone.svg);
@@ -369,6 +374,9 @@ h6 {
 .card:hover > .btn {
   border: 2px solid hsl(25, 93%, 88%);
   background-color: hsl(25, 93%, 88%);
+}
+.card > .btn {
+  margin-top: 1px;
 }
 .card__img {
   border-radius: 9px 9px 0 0;

@@ -1,6 +1,7 @@
 .header {
   position: absolute;
   width: 1200px;
+  max-width: 1200px;
   left: calc((100vw - $desktop-width + 60px) /2);
   top: 60px;
   display: flex;

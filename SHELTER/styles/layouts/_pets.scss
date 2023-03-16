@@ -37,5 +37,6 @@
 
 .pets-cards__wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 90px;
 }

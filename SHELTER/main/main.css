@@ -157,6 +157,10 @@ h6 {
   letter-spacing: 0.06em;
 }
 
+a {
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -187,9 +191,17 @@ h6 {
   flex-wrap: wrap;
 }
 
+.layout-rows {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 .header {
   position: absolute;
   width: 1200px;
+  max-width: 1200px;
   left: calc((100vw - 1280px + 60px) / 2);
   top: 60px;
   display: flex;
@@ -209,7 +221,7 @@ h6 {
   border-bottom: 3px solid transparent;
 }
 .header .nav__item_active {
-  border-bottom: 3px solid hsl(25, 69%, 82%);
+  border-bottom: 3px solid #F1CDB3;
 }
 .header .nav__link {
   text-decoration: none;
@@ -285,6 +297,7 @@ h6 {
 
 .pets-cards__wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 90px;
 }
 
@@ -309,9 +322,10 @@ h6 {
 
 .donation {
   color: #545454;
+  background-color: #F6F6F6;
 }
 .donation__wrapper {
-  padding: 80px 0 100px;
+  padding: 80px 0 99px;
   gap: 31px;
 }
 .donation__content {
@@ -331,13 +345,76 @@ h6 {
   padding: 10px 15px;
   max-width: 349px;
   box-sizing: border-box;
-  background-color: hsl(25, 69%, 82%);
+  background-color: #F1CDB3;
   border-radius: 9px;
   display: flex;
   justify-content: space-between;
 }
 .donation__legal {
   color: #B2B2B2;
+}
+
+.footer {
+  background: url(/SHELTER/assets/images/noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+.footer h3 {
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+.footer h4 {
+  color: #F1CDB3;
+  position: relative;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+}
+.footer a {
+  position: relative;
+  padding-left: 60px;
+}
+.footer__adr {
+  padding-left: 40px;
+}
+.footer__adr::before {
+  content: url(/SHELTER/assets/icons/icon-marker.svg);
+  display: block;
+  width: 22px;
+  height: 32px;
+  position: absolute;
+  left: -1px;
+  top: 6px;
+}
+.footer__mail::before {
+  content: url(/SHELTER/assets/icons/icon-email.svg);
+  display: block;
+  width: 22px;
+  height: 32px;
+  position: absolute;
+  left: 0px;
+  top: 6px;
+}
+.footer__tel::before {
+  content: url(/SHELTER/assets/icons/icon-phone.svg);
+  display: block;
+  width: 22px;
+  height: 32px;
+  position: absolute;
+  left: 0px;
+  top: 6px;
+}
+.footer__content {
+  padding: 40px 0 0;
+}
+.footer__item {
+  margin: 17px 0 0 0;
+  flex-basis: 300px;
+  height: 241px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__locations {
+  margin-right: 21px;
 }
 
 .logo {
@@ -357,7 +434,7 @@ h6 {
 
 .btn {
   box-sizing: border-box;
-  border: 2px solid hsl(25, 69%, 82%);
+  border: 2px solid #F1CDB3;
   color: #444444;
   background-color: transparent;
 }
@@ -381,11 +458,11 @@ h6 {
   border-radius: 100px;
 }
 .btn-rounded-colored {
-  background-color: hsl(25, 69%, 82%);
+  background-color: #F1CDB3;
 }
 
 .logo h1 {
-  color: hsl(25, 69%, 82%);
+  color: #F1CDB3;
 }
 .logo p {
   color: #FFFFFF;

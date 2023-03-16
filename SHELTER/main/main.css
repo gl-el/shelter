@@ -264,8 +264,8 @@ a {
   text-align: center;
 }
 .pets__wrapper {
-  padding: 80px 0 100px;
-  gap: 59px;
+  padding: 81px 0 100px;
+  gap: 58px;
 }
 .pets__wrapper .btn {
   margin-top: 1px;
@@ -303,7 +303,7 @@ a {
   text-align: center;
 }
 .help__wrapper {
-  padding: 81px 0 100px;
+  padding: 82px 0 100px;
   gap: 58px;
 }
 .help-cards {

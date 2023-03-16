@@ -15,7 +15,7 @@ h6 {
   font-family: "Arial", Helvetica, sans-serif;
 }
 
-.donation__card, .pets-card, .btn, a {
+.donation__card, .pets-card, .card, .btn, a {
   transition: all 0.5s ease-in-out;
 }
 
@@ -347,6 +347,32 @@ h6 {
 }
 .btn-rounded_colored:hover {
   background-color: hsl(25, 93%, 88%);
+}
+
+.card {
+  gap: 31px;
+  color: #545454;
+  background-color: #FAFAFA;
+  padding-bottom: 30px;
+  border-radius: 9px;
+}
+.card:hover {
+  cursor: pointer;
+  background-color: #F6F6F6;
+  box-shadow: 5px 5px 20px 10px rgba(13, 13, 13, 0.04);
+}
+.card:hover > .btn {
+  border: 2px solid hsl(25, 93%, 88%);
+  background-color: hsl(25, 93%, 88%);
+}
+.card__img {
+  border-radius: 9px 9px 0 0;
+}
+
+.pets-cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
 }
 
 .hero__wrapper {

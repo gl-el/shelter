@@ -1,0 +1,29 @@
+.card {
+  gap: 31px;
+  color: $color-dark-l;
+  background-color: $color-light-s;
+  padding-bottom: 30px;
+  border-radius: 9px;
+  @extend %transition;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-light-l;
+    box-shadow: 5px 5px 20px 10px rgba(13, 13, 13, 0.04);
+
+    >.btn {
+      border: 2px solid $color-primary-light;
+      background-color: $color-primary-light;
+    }
+  }
+
+  &__img {
+    border-radius: 9px 9px 0 0;
+  }
+}
+
+.pets-cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
+}

@@ -14,9 +14,21 @@
   &-cards {
     gap: 120px;
     row-gap: 55px;
+    @include desktop-s {
+      gap: 90px;
+      justify-content: space-between;
+    }
+    @include media-tablet {
+      gap: 60px;
+      row-gap: 55px;
+      justify-content: center;
+    }
   }
 
   &-card {
     gap: 30px;
+    @include desktop-s {
+      width: 170px;
+    }
   }
 }

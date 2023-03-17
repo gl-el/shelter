@@ -12,6 +12,7 @@
     >img {
       max-width: 60%;
       height: auto;
+      align-self: flex-end;
     }
 
     @include media-tablet {

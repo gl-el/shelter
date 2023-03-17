@@ -252,6 +252,50 @@ h6 {
 .footer a {
   position: relative;
 }
+.footer__content {
+  padding: 40px 0 0;
+}
+@media (max-width: 768px) {
+  .footer__content {
+    padding: 30px 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.footer__item {
+  margin: 17px 0 0 0;
+  min-width: 300px;
+  flex-basis: 300px;
+  height: 241px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .footer__item {
+    min-width: 200px;
+    margin: 0 40px 0 20px;
+  }
+}
+.footer__item h4:hover {
+  color: hsl(25, 93%, 88%);
+}
+.footer img {
+  min-width: 0;
+  min-height: 0;
+  flex-shrink: 1;
+  align-self: flex-end;
+}
+@media (max-width: 768px) {
+  .footer img {
+    margin-top: 58px;
+  }
+}
+@media (max-width: 768px) {
+  .footer__contacts {
+    flex-basis: 280px;
+  }
+}
 .footer__adr {
   padding-left: 40px;
 }
@@ -287,20 +331,6 @@ h6 {
   position: absolute;
   left: 0px;
   top: 6px;
-}
-.footer__content {
-  padding: 40px 0 0;
-}
-.footer__item {
-  margin: 17px 0 0 0;
-  flex-basis: 300px;
-  height: 241px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.footer__item h4:hover {
-  color: hsl(25, 93%, 88%);
 }
 .footer__locations {
   margin-right: 21px;
@@ -401,6 +431,7 @@ h6 {
 .hero__wrapper > img {
   max-width: 60%;
   height: auto;
+  align-self: flex-end;
 }
 @media (max-width: 768px) {
   .hero__wrapper {
@@ -547,8 +578,26 @@ h6 {
   gap: 120px;
   row-gap: 55px;
 }
+@media (max-width: 1024px) {
+  .help-cards {
+    gap: 90px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .help-cards {
+    gap: 60px;
+    row-gap: 55px;
+    justify-content: center;
+  }
+}
 .help-card {
   gap: 30px;
+}
+@media (max-width: 1024px) {
+  .help-card {
+    width: 170px;
+  }
 }
 
 .donation {
@@ -558,6 +607,17 @@ h6 {
 .donation__wrapper {
   padding: 80px 0 99px;
   gap: 31px;
+}
+@media (max-width: 768px) {
+  .donation__wrapper {
+    flex-direction: column-reverse;
+    gap: 60px;
+  }
+}
+.donation__img {
+  min-width: 0;
+  min-height: 0;
+  flex-shrink: 1;
 }
 .donation__content {
   max-width: 380px;

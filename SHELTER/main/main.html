@@ -10,9 +10,9 @@
   <title>Cozy House</title>
 </head>
 
-<body>
+<body class="body">
   <header class="header wrapper">
-    <a href="#">
+    <a href="#" class="logo-link">
       <div class="logo">
         <h1>Cozy House</h1>
         <p class="subtitle">Shelter for pets in Boston</p>
@@ -20,12 +20,18 @@
     </a>
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item nav__item_active text-l"><a href="#" class="nav__link nav__link_active">About the shelter</a></li>
+        <li class="nav__item nav__item_active text-l"><a href="#" class="nav__link nav__link_active">About the
+            shelter</a></li>
         <li class="nav__item text-l"><a href="/SHELTER/our-pets/pets.html" class="nav__link">Our pets</a></li>
         <li class="nav__item text-l"><a href="#help" class="nav__link">Help the shelter</a></li>
         <li class="nav__item text-l"><a href="#footer" class="nav__link">Contacts</a></li>
       </ul>
     </nav>
+    <div class="burger">
+      <button class="burger__btn"><span class="burger__line"></span><span class="burger__line"></span><span
+          class="burger__line"></span></button>
+      <div class="burger__bg"></div>
+    </div>
   </header>
   <main>
     <section class="hero">
@@ -84,7 +90,8 @@
           <button class="btn btn-round btn-round_right"><img class="btn-round__arrow" src="../assets/icons/Arrow.svg"
               alt="arrow"></button>
         </div>
-        <a href="/SHELTER/our-pets/pets.html"><button class="btn btn-rounded btn-rounded_colored">Get to know the rest</button></a>
+        <a href="/SHELTER/our-pets/pets.html"><button class="btn btn-rounded btn-rounded_colored">Get to know the
+            rest</button></a>
       </div>
     </section>
     <section class="help" id="help">
@@ -163,13 +170,17 @@
         </div>
         <div class="footer__item footer__locations">
           <h3>We are waiting for your visit</h3>
-          <a class="footer__adr" href="https://goo.gl/maps/xR8bFzMPAyPipwTT7" target="_blank"><h4 >1 Central Street, Boston (entrance from the store)</h4></a>
-          <a class="footer__adr" href="https://goo.gl/maps/9Pp2B2g3EDbo9kk2A" target="_blank"><h4>18 South Park, London </h4></a>
+          <a class="footer__adr" href="https://goo.gl/maps/xR8bFzMPAyPipwTT7" target="_blank">
+            <h4>1 Central Street, Boston (entrance from the store)</h4>
+          </a>
+          <a class="footer__adr" href="https://goo.gl/maps/9Pp2B2g3EDbo9kk2A" target="_blank">
+            <h4>18 South Park, London </h4>
+          </a>
         </div>
         <img class="footer__img" src="../assets/images/footer-puppy.png" alt="puppy">
       </div>
     </div>
   </footer>
 </body>
-
+  <script src="/SHELTER/js/burger.js"></script>
 </html>

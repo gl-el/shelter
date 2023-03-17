@@ -3,6 +3,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.body{
+  
+  &_hidden {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
 a {
   text-decoration: none;
   @extend %transition;
@@ -37,11 +45,18 @@ h1 {
 
 h2 {
   @include font(4.4rem, 130%);
+  @include media-mobile {
+    @include font(2.5rem, 130%);
+    letter-spacing: 0.06em;
+  }
 }
 
 h3 {
   @include font(3.5rem, 130%);
   letter-spacing: 0.06em;
+  @include media-mobile {
+    @include font(2.5rem, 130%);
+  }
 }
 
 h4 {

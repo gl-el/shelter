@@ -3,10 +3,11 @@
   justify-content: flex-end;
   align-items: center;
   padding: 30px 0;
+  a {
+    margin-right: auto;
+  }
 
   .nav {
-    margin-left: auto;
-
     &__list {
       padding: 0;
       list-style: none;
@@ -14,7 +15,7 @@
       gap: 35px;
     }
 
-    &__link{
+    &__link {
       border-bottom: 3px solid transparent;
 
       &_active {
@@ -27,5 +28,79 @@
       }
     }
 
+    &_hidden {
+      overflow-y: hidden;
+    }
+
+    @include media-mobile {
+      position: fixed;
+      height: 100vh;
+      width: 320px;
+      top: 0;
+      right: 0;
+      transform: translateX(100vw);
+      background-color: $color-dark-3xl;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.5s;
+
+      >.nav__list {
+        flex-direction: column;
+        align-items: center;
+
+        >.nav__item {
+          @include font(3.2rem, 160%);
+        }
+      }
+
+      &_active {
+
+        transform: translateX(0);
+
+        ~.burger {
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+.logo-link_active {
+  position: relative;
+  z-index: 2;
+  transform: translateX(calc(100vw - 320px + 10px));
+}
+
+.burger {
+  display: none;
+  @extend %transition;
+
+  &_active {
+    @extend %transition;
+    transform: rotate(90deg);
+  }
+
+  @include media-mobile {
+    display: block;
+  }
+
+  &__btn {
+    width: 30px;
+    height: 22px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__line {
+    display: inline-block;
+    background-color: $color-primary;
+    width: 100%;
+    height: 2px;
   }
 }

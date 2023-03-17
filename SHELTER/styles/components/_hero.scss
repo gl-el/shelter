@@ -23,6 +23,13 @@
         margin-left: 20%;
       }
     }
+
+    @include media-mobile {
+      >img {
+        max-width: 260px;
+        margin-left: calc(100vw - 280px);
+      }
+    }
   }
 
   &__content {
@@ -46,6 +53,20 @@
 
       a {
         text-align: center;
+      }
+    }
+
+    @include media-mobile {
+      max-width: 100%;
+      margin-bottom: 107px;
+
+      h2 {
+        text-align: center;
+      }
+
+      .text-l {
+        text-align: center;
+        margin: 41px 0;
       }
     }
   }

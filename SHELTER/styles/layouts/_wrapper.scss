@@ -10,4 +10,8 @@
   @include media-tablet {
     max-width: calc($tablet-width - 60px);
   }
+  @include media-mobile {
+    width: calc(100vw - 20px);
+    max-width: calc($mobile-l-width - 10px);
+  }
 }

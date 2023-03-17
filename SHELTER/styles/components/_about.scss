@@ -1,6 +1,7 @@
 .about {
-  
+
   background-color: $color-light-xl;
+
   &__wrapper {
     padding: 80px 0 100px;
     gap: 120px;
@@ -8,6 +9,15 @@
     @include media-tablet {
       flex-direction: column-reverse;
       gap: 80px;
+    }
+
+    @include media-mobile {
+      padding: 41px 0 42px;
+      gap: 40px;
+
+      >img {
+        width: 260px;
+      }
     }
   }
 
@@ -22,6 +32,18 @@
     .text-l {
       margin-top: 24px;
       color: $color-dark-xl;
+    }
+
+    @include media-mobile {
+      max-width: 270px;
+
+      h3 {
+        text-align: center;
+      }
+
+      >.text-l {
+        text-align: justify;
+      }
     }
   }
 }

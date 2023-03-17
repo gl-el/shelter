@@ -16,10 +16,22 @@
   }
 
   &__content {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 53px;
+    min-width: 1000px;
+    .btn {
+      flex-grow: 0;
+    }
+
+    @include desktop-s {
+      min-width: 730px;
+    }
+
+    @include media-tablet {
+      min-width: 600px;
+    }
   }
 
 }
@@ -46,10 +58,20 @@
   &__img {
     border-radius: 9px 9px 0 0;
   }
+
 }
 
 .pets-cards__wrapper {
   display: flex;
-  flex-wrap: wrap;
-  gap: 90px;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin: 0 4.5%;
+  @include desktop-s {
+    div:last-child {
+      display: none;
+    }
+  }
+  @include media-tablet {
+    margin: 0 1%;
+  }
 }

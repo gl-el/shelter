@@ -4,3 +4,10 @@
   font-weight: $weight;
   line-height: $height;
 }
+@mixin desktop-s {
+  @media (max-width: $desktop-s-width) { @content; }
+}
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) { @content; }
+}

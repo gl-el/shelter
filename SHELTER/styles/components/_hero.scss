@@ -2,17 +2,50 @@
 
   &__wrapper {
     margin-top: 30px;
-    gap: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+
+    
+    >img {
+      max-width: 60%;
+      height: auto;
+    }
+
+    @include media-tablet {
+      justify-content: center;
+
+      >img {
+        max-width: 80.5%;
+        margin-left: 20%;
+      }
+    }
   }
 
   &__content {
-    max-width: 460px;
+    max-width: 39%;
     margin-bottom: 81px;
     color: $color-light-xl;
+    display: flex;
+    flex-direction: column;
 
     .text-l {
       margin: 42px 0;
+    }
+
+    @include media-tablet {
+      max-width: 65%;
+      margin-bottom: 100px;
+
+      .text-l {
+        margin: 40px 0;
+      }
+
+      a {
+        text-align: center;
+      }
     }
   }
 }

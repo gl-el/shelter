@@ -21,49 +21,49 @@ h6 {
 
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/ArialMT.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/ArialMT.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/ArialMT.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/ArialMT.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/Arial-ItalicMT.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/Arial-ItalicMT.woff) format("woff");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/Arial-ItalicMT.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/Arial-ItalicMT.woff2) format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/Georgia.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/Georgia.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia-Bold.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/Georgia-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia-Bold.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/Georgia-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -173,7 +173,13 @@ h6 {
 
 .wrapper {
   max-width: 1200px;
+  width: calc(100vw - 60px);
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 708px;
+  }
 }
 
 .layout-2-columns {
@@ -332,6 +338,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
 }
 .btn-round:hover {
   background-color: hsl(25, 93%, 88%);
@@ -345,6 +352,7 @@ h6 {
   transform: rotate(180deg);
 }
 .btn-round__arrow {
+  padding: 23px 19px;
   width: 14px;
   height: 6px;
 }
@@ -382,24 +390,48 @@ h6 {
   border-radius: 9px 9px 0 0;
 }
 
-.pets-cards__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 90px;
-}
-
 .hero__wrapper {
   margin-top: 30px;
-  gap: 41px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
+.hero__wrapper > img {
+  max-width: 60%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .hero__wrapper {
+    justify-content: center;
+  }
+  .hero__wrapper > img {
+    max-width: 80.5%;
+    margin-left: 20%;
+  }
+}
 .hero__content {
-  max-width: 460px;
+  max-width: 39%;
   margin-bottom: 81px;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
 }
 .hero__content .text-l {
   margin: 42px 0;
+}
+@media (max-width: 768px) {
+  .hero__content {
+    max-width: 65%;
+    margin-bottom: 100px;
+  }
+  .hero__content .text-l {
+    margin: 40px 0;
+  }
+  .hero__content a {
+    text-align: center;
+  }
 }
 
 .about {
@@ -408,6 +440,12 @@ h6 {
 .about__wrapper {
   padding: 80px 0 100px;
   gap: 120px;
+}
+@media (max-width: 768px) {
+  .about__wrapper {
+    flex-direction: column-reverse;
+    gap: 80px;
+  }
 }
 .about__content {
   max-width: 430px;
@@ -436,10 +474,24 @@ h6 {
   margin-top: 1px;
 }
 .pets__content {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 53px;
+  min-width: 1000px;
+}
+.pets__content .btn {
+  flex-grow: 0;
+}
+@media (max-width: 1024px) {
+  .pets__content {
+    min-width: 730px;
+  }
+}
+@media (max-width: 768px) {
+  .pets__content {
+    min-width: 600px;
+  }
 }
 
 .pets-card {
@@ -464,8 +516,19 @@ h6 {
 
 .pets-cards__wrapper {
   display: flex;
-  flex-wrap: wrap;
-  gap: 90px;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin: 0 4.5%;
+}
+@media (max-width: 1024px) {
+  .pets-cards__wrapper div:last-child {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .pets-cards__wrapper {
+    margin: 0 1%;
+  }
 }
 
 .help {
@@ -531,6 +594,11 @@ body {
 
 .header {
   margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .header {
+    margin-top: 0px;
+  }
 }
 
 .logo h1 {

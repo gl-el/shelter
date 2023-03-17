@@ -21,49 +21,49 @@ h6 {
 
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/ArialMT.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/ArialMT.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/ArialMT.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/ArialMT.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/Arial-ItalicMT.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/Arial-ItalicMT.woff) format("woff");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/Arial-ItalicMT.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/Arial-ItalicMT.woff2) format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/Georgia.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/Georgia.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia-Bold.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/Georgia-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia-Bold.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/Georgia-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -173,7 +173,13 @@ h6 {
 
 .wrapper {
   max-width: 1200px;
+  width: calc(100vw - 60px);
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 708px;
+  }
 }
 
 .layout-2-columns {
@@ -332,6 +338,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
 }
 .btn-round:hover {
   background-color: hsl(25, 93%, 88%);
@@ -345,6 +352,7 @@ h6 {
   transform: rotate(180deg);
 }
 .btn-round__arrow {
+  padding: 23px 19px;
   width: 14px;
   height: 6px;
 }
@@ -380,12 +388,6 @@ h6 {
 }
 .card__img {
   border-radius: 9px 9px 0 0;
-}
-
-.pets-cards__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 90px;
 }
 
 .gallery {

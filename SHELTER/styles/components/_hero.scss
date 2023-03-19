@@ -44,12 +44,16 @@
       margin: 42px 0;
     }
 
+    a {
+      width: 208px;
+    }
+
     @include media-tablet {
       max-width: 65%;
       margin-bottom: 98px;
 
       a {
-        text-align: center;
+        margin: 0 auto;
       }
     }
 

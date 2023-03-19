@@ -11,7 +11,7 @@
     }
     @include media-mobile {
       gap: 41px; 
-      padding: 41px 0;
+      padding: 41px 0 42px;
     }
   }
 
@@ -22,7 +22,7 @@
     flex-shrink: 1;
 
     @include media-mobile {
-      max-width: 88%;
+      max-width: 87%;
     }
   }
 

@@ -42,7 +42,11 @@
       }
 
       >.text-l {
+        margin-top: 24px;
         text-align: justify;
+      }
+      >.text-l:last-of-type {
+        margin-top: 23px;
       }
     }
   }

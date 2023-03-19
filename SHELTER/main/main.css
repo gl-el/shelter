@@ -627,13 +627,16 @@ h6 {
 .hero__content .text-l {
   margin: 42px 0;
 }
+.hero__content a {
+  width: 208px;
+}
 @media (max-width: 768px) {
   .hero__content {
     max-width: 65%;
     margin-bottom: 98px;
   }
   .hero__content a {
-    text-align: center;
+    margin: 0 auto;
   }
 }
 @media (max-width: 425px) {
@@ -691,7 +694,11 @@ h6 {
     text-align: center;
   }
   .about__content > .text-l {
+    margin-top: 24px;
     text-align: justify;
+  }
+  .about__content > .text-l:last-of-type {
+    margin-top: 23px;
   }
 }
 
@@ -709,7 +716,7 @@ h6 {
 @media (max-width: 425px) {
   .pets__wrapper {
     padding: 42px 0;
-    gap: 40px;
+    gap: 41px;
   }
 }
 .pets__content {
@@ -892,7 +899,7 @@ h6 {
 @media (max-width: 425px) {
   .donation__wrapper {
     gap: 41px;
-    padding: 41px 0;
+    padding: 41px 0 42px;
   }
 }
 .donation__img {
@@ -903,7 +910,7 @@ h6 {
 }
 @media (max-width: 425px) {
   .donation__img {
-    max-width: 88%;
+    max-width: 87%;
   }
 }
 .donation__content {

@@ -246,6 +246,11 @@ h6 {
 .header a {
   margin-right: auto;
 }
+@media (max-width: 425px) {
+  .header {
+    width: 88%;
+  }
+}
 .header .nav__list {
   padding: 0 0 4px;
   list-style: none;
@@ -315,11 +320,6 @@ h6 {
 @media (max-width: 738px) {
   .burger {
     display: block;
-  }
-}
-@media (max-width: 425px) {
-  .burger {
-    margin-right: 43px;
   }
 }
 .burger__btn {
@@ -500,6 +500,7 @@ h6 {
 @media (max-width: 425px) {
   .footer__locations {
     margin-right: 0;
+    height: 230px;
   }
 }
 
@@ -603,6 +604,7 @@ h6 {
 @media (max-width: 768px) {
   .hero__wrapper {
     justify-content: center;
+    margin-top: 30px;
   }
   .hero__wrapper > img {
     max-width: 80.5%;
@@ -628,10 +630,7 @@ h6 {
 @media (max-width: 768px) {
   .hero__content {
     max-width: 65%;
-    margin-bottom: 100px;
-  }
-  .hero__content .text-l {
-    margin: 40px 0;
+    margin-bottom: 98px;
   }
   .hero__content a {
     text-align: center;
@@ -705,10 +704,7 @@ h6 {
 }
 .pets__wrapper {
   padding: 81px 0 100px;
-  gap: 58px;
-}
-.pets__wrapper .btn {
-  margin-top: 1px;
+  gap: 59px;
 }
 @media (max-width: 425px) {
   .pets__wrapper {
@@ -785,7 +781,7 @@ h6 {
 }
 @media (max-width: 1024px) {
   .pets-cards__wrapper {
-    margin: 0 1%;
+    margin: 0 1.5%;
   }
   .pets-cards__wrapper div:last-child {
     display: none;
@@ -817,7 +813,7 @@ h6 {
 @media (max-width: 425px) {
   .help__wrapper {
     padding: 43px 0 40px;
-    gap: 40px;
+    gap: 41px;
   }
   .help__wrapper h3 {
     max-width: 80%;
@@ -895,8 +891,8 @@ h6 {
 }
 @media (max-width: 425px) {
   .donation__wrapper {
-    gap: 40px;
-    padding: 42px 0;
+    gap: 41px;
+    padding: 41px 0;
   }
 }
 .donation__img {

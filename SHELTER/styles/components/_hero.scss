@@ -17,6 +17,7 @@
 
     @include media-tablet {
       justify-content: center;
+      margin-top: 30px;
 
       >img {
         max-width: 80.5%;
@@ -45,11 +46,7 @@
 
     @include media-tablet {
       max-width: 65%;
-      margin-bottom: 100px;
-
-      .text-l {
-        margin: 40px 0;
-      }
+      margin-bottom: 98px;
 
       a {
         text-align: center;

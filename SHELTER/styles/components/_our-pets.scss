@@ -8,11 +8,7 @@
 
   &__wrapper {
     padding: 81px 0 100px;
-    gap: 58px;
-
-    .btn {
-      margin-top: 1px;
-    }
+    gap: 59px;
 
     @include media-mobile {
       padding: 42px 0;
@@ -98,7 +94,7 @@
   @extend %transition;
 
   @include desktop-s {
-    margin: 0 1%;
+    margin: 0 1.5%;
 
     div:last-child {
       display: none;

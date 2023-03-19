@@ -246,6 +246,11 @@ h6 {
 .header a {
   margin-right: auto;
 }
+@media (max-width: 425px) {
+  .header {
+    width: 88%;
+  }
+}
 .header .nav__list {
   padding: 0 0 4px;
   list-style: none;
@@ -315,11 +320,6 @@ h6 {
 @media (max-width: 738px) {
   .burger {
     display: block;
-  }
-}
-@media (max-width: 425px) {
-  .burger {
-    margin-right: 43px;
   }
 }
 .burger__btn {
@@ -500,6 +500,7 @@ h6 {
 @media (max-width: 425px) {
   .footer__locations {
     margin-right: 0;
+    height: 230px;
   }
 }
 

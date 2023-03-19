@@ -8,6 +8,10 @@
     margin-right: auto;
   }
 
+  @include media-mobile {
+    width: 88%;
+  }
+
   .nav {
     &__list {
       padding: 0 0 4px;
@@ -86,10 +90,6 @@
 
   @include media-tablet-m {
     display: block;
-  }
-
-  @include media-mobile {
-    margin-right: 43px;
   }
 
   &__btn {

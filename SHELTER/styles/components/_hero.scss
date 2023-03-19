@@ -1,14 +1,14 @@
 .hero {
 
   &__wrapper {
-    margin-top: 30px;
+    margin-top: 60px;
     gap: 41px;
     flex-wrap: wrap;
   }
 
   &__content {
     max-width: 460px;
-    margin-bottom: 81px;
+    margin-bottom: 80px;
     color: $color-light-xl;
 
     .text-l {

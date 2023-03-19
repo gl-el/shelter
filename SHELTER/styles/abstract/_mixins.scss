@@ -12,6 +12,10 @@
   @media (max-width: $tablet-width) { @content; }
 }
 
+@mixin media-tablet-m {
+  @media (max-width: calc($tablet-width - 30px)) { @content; }
+}
+
 @mixin media-mobile {
   @media (max-width: $mobile-l-width) { @content; }
 }

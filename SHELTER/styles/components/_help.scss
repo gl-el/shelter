@@ -9,6 +9,20 @@
   &__wrapper {
     padding: 82px 0 100px;
     gap: 58px;
+
+    @include media-mobile {
+      padding: 43px 0 40px;
+      gap: 40px;
+      h3 {
+        max-width: 80%;
+      }
+
+      .help-cards::after{
+        content: "";
+        width: 130px;
+        height: 80px;
+      }
+    }
   }
 
   &-cards {
@@ -23,12 +37,32 @@
       row-gap: 55px;
       justify-content: center;
     }
+
+    @include media-mobile {
+      align-items: center;
+      gap: 20px;
+      row-gap: 29px;
+      justify-content: space-around;     
+    }
   }
 
   &-card {
     gap: 30px;
     @include desktop-s {
       width: 170px;
+    }
+
+    @include media-mobile {
+      width: 130px;
+      gap: 22px;
+      >h4 {
+        @include font(1.5rem, 110%);
+        letter-spacing: 0.06em;
+      }
+      >img{
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 }

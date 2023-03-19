@@ -2,17 +2,11 @@ body {
   background: url(/SHELTER/assets/images/noise_lines_transparent@2X.png), $start-screen-gradient;
 }
 
-.header {
-  margin-top: 30px;
-  @include media-tablet {
-    margin-top: 0px;
-  }
-}
-
 .logo {
   h1 {
     color: $color-primary;
   }
+
   p {
     color: $color-light-xl;
   }
@@ -20,9 +14,11 @@ body {
 
 .nav__link {
   color: $color-dark-s;
+
   &_active {
     color: $color-light-xl;
   }
+
   &:hover {
     color: $color-light-xl;
   }

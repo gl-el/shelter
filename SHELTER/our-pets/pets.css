@@ -247,12 +247,13 @@ h6 {
   margin-right: auto;
 }
 .header .nav__list {
-  padding: 0;
+  padding: 0 0 4px;
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 36px;
 }
 .header .nav__link {
+  padding: 0 0 4px;
   border-bottom: 3px solid transparent;
 }
 .header .nav__link_active {

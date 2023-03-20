@@ -74,6 +74,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+    h4 {
+      @extend %transition;
+    }
+
     h4:hover {
       color: $color-primary-light;
     }

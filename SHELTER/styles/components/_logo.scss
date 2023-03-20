@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  @extend %transition;
+
   h1 {
     margin: 0;
   }
@@ -11,5 +13,9 @@
   p {
     margin: 0;
     letter-spacing: 0.1em;
+  }
+
+  &:hover {
+    filter: brightness(1.3);
   }
 }

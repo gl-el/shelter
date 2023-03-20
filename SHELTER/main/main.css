@@ -15,8 +15,8 @@ h6 {
   font-family: "Arial", Helvetica, sans-serif;
 }
 
-.donation__card, .pets-cards__wrapper, .pets-card, .pets__content, .card, .btn, .burger_active, .burger, a {
-  transition: all 0.5s ease-in-out;
+.donation__card, .pets-cards__wrapper, .pets-card, .pets__content, .card, .btn, .logo, .footer h4, .burger_active, .burger, a {
+  transition: all 0.4s ease-in-out;
 }
 
 @font-face {
@@ -517,6 +517,9 @@ h6 {
 .logo p {
   margin: 0;
   letter-spacing: 0.1em;
+}
+.logo:hover {
+  filter: brightness(1.3);
 }
 
 .btn {

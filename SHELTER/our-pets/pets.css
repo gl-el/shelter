@@ -15,55 +15,55 @@ h6 {
   font-family: "Arial", Helvetica, sans-serif;
 }
 
-.card, .btn, a {
-  transition: all 0.5s ease-in-out;
+.card, .btn, .logo, .footer__item h4, a {
+  transition: all 0.4s ease-in-out;
 }
 
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/ArialMT.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/ArialMT.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/ArialMT.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/ArialMT.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/Arial-ItalicMT.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/Arial-ItalicMT.woff) format("woff");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../assets/fonts/Arial-ItalicMT.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/Arial-ItalicMT.woff2) format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/Georgia.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/Georgia.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia-Bold.woff) format("woff");
+  src: url(/SHELTER/assets/fonts/Georgia-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../assets/fonts/Georgia-Bold.woff2) format("woff2");
+  src: url(/SHELTER/assets/fonts/Georgia-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -314,6 +314,9 @@ h6 {
 .logo p {
   margin: 0;
   letter-spacing: 0.1em;
+}
+.logo:hover {
+  filter: brightness(1.3);
 }
 
 .btn {

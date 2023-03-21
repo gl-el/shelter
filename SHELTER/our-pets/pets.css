@@ -21,49 +21,49 @@ h6 {
 
 @font-face {
   font-family: "Arial";
-  src: url(../../../SHELTER/assets/fonts/ArialMT.woff) format("woff");
+  src: url(../assets/fonts/ArialMT.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../../SHELTER/assets/fonts/ArialMT.woff2) format("woff2");
+  src: url(../assets/fonts/ArialMT.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../../SHELTER/assets/fonts/Arial-ItalicMT.woff) format("woff");
+  src: url(../assets/fonts/Arial-ItalicMT.woff) format("woff");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Arial";
-  src: url(../../../SHELTER/assets/fonts/Arial-ItalicMT.woff2) format("woff2");
+  src: url(../assets/fonts/Arial-ItalicMT.woff2) format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../../SHELTER/assets/fonts/Georgia.woff) format("woff");
+  src: url(../assets/fonts/Georgia.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../../SHELTER/assets/fonts/Georgia.woff2) format("woff2");
+  src: url(../assets/fonts/Georgia.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../../SHELTER/assets/fonts/Georgia-Bold.woff) format("woff");
+  src: url(../assets/fonts/Georgia-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(../../../SHELTER/assets/fonts/Georgia-Bold.woff2) format("woff2");
+  src: url(../assets/fonts/Georgia-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -231,7 +231,7 @@ h6 {
 }
 
 .footer {
-  background: url(../../../SHELTER/assets/images/noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(../assets/images/noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 .footer h3 {
   color: #FFFFFF;
@@ -251,7 +251,7 @@ h6 {
   padding-left: 40px;
 }
 .footer__adr::before {
-  content: url(../../../SHELTER/assets/icons/icon-marker.svg);
+  content: url(../assets/icons/icon-marker.svg);
   display: block;
   width: 22px;
   height: 32px;
@@ -263,7 +263,7 @@ h6 {
   padding-left: 60px;
 }
 .footer__mail::before {
-  content: url(/SHELTER/assets/icons/icon-email.svg);
+  content: url(../assets/icons/icon-email.svg);
   display: block;
   width: 22px;
   height: 32px;
@@ -275,7 +275,7 @@ h6 {
   padding-left: 60px;
 }
 .footer__tel::before {
-  content: url(/SHELTER/assets/icons/icon-phone.svg);
+  content: url(../assets/icons/icon-phone.svg);
   display: block;
   width: 22px;
   height: 32px;

@@ -1,5 +1,5 @@
 .footer {
-  background: url(/SHELTER/assets/images/noise_lines_transparent@2X.png), $footer-gradient;
+  background: url(../../../SHELTER/assets/images/noise_lines_transparent@2X.png), $footer-gradient;
 
   h3 {
     color: $color-light-xl;
@@ -23,7 +23,7 @@
     padding-left: 40px;
 
     &::before {
-      content: url(/SHELTER/assets/icons/icon-marker.svg);
+      content: url(../../../SHELTER/assets/icons/icon-marker.svg);
       display: block;
       width: 22px;
       height: 32px;

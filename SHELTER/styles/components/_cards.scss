@@ -25,3 +25,35 @@
     border-radius: 9px 9px 0 0;
   }
 }
+
+
+.slider {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: 0;
+  top: 0;
+  min-width: 300%;
+  transition: left 0.5s;
+  @include desktop-s {
+    min-width: 288%;
+  }
+  @include media-tablet {
+    min-width: 302%;
+  }
+}
+
+.slider__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  @extend %transition;
+
+  @include media-tablet-m {
+    order: -1;
+  }
+}

@@ -15,55 +15,55 @@ h6 {
   font-family: "Arial", Helvetica, sans-serif;
 }
 
-.card, .btn, .logo, .footer h4, .burger_active, .burger, a {
+.slider__wrapper, .card, .btn, .logo, .footer h4, .burger_active, .burger, a {
   transition: all 0.4s ease-in-out;
 }
 
 @font-face {
   font-family: "Arial";
-  src: url(/SHELTER/assets/fonts/ArialMT.woff) format("woff");
+  src: url(../assets/fonts/ArialMT.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(/SHELTER/assets/fonts/ArialMT.woff2) format("woff2");
+  src: url(../assets/fonts/ArialMT.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Arial";
-  src: url(/SHELTER/assets/fonts/Arial-ItalicMT.woff) format("woff");
+  src: url(../assets/fonts/Arial-ItalicMT.woff) format("woff");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Arial";
-  src: url(/SHELTER/assets/fonts/Arial-ItalicMT.woff2) format("woff2");
+  src: url(../assets/fonts/Arial-ItalicMT.woff2) format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(/SHELTER/assets/fonts/Georgia.woff) format("woff");
+  src: url(../assets/fonts/Georgia.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(/SHELTER/assets/fonts/Georgia.woff2) format("woff2");
+  src: url(../assets/fonts/Georgia.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(/SHELTER/assets/fonts/Georgia-Bold.woff) format("woff");
+  src: url(../assets/fonts/Georgia-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(/SHELTER/assets/fonts/Georgia-Bold.woff2) format("woff2");
+  src: url(../assets/fonts/Georgia-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -589,6 +589,41 @@ h6 {
 }
 .card__img {
   border-radius: 9px 9px 0 0;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: 0;
+  top: 0;
+  min-width: 300%;
+  transition: left 0.5s;
+}
+@media (max-width: 1024px) {
+  .slider {
+    min-width: 288%;
+  }
+}
+@media (max-width: 768px) {
+  .slider {
+    min-width: 302%;
+  }
+}
+
+.slider__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 738px) {
+  .slider__wrapper {
+    order: -1;
+  }
 }
 
 .gallery {

@@ -6,9 +6,17 @@
   @extend %text-btn;
   @extend %transition;
 
-  &:hover {
-    cursor: pointer;
-    border: 2px solid $color-primary-light;
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      border: 2px solid $color-primary-light;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      border: 2px solid $color-primary-light;
+    }
   }
 
   &-round {
@@ -20,7 +28,14 @@
     justify-content: center;
     flex-grow: 1;
 
-    &:hover {
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+        background-color: $color-primary-light;
+      }
+    }
+
+    &:active {
       background-color: $color-primary-light;
     }
 
@@ -48,7 +63,15 @@
     &_colored {
       background-color: $color-primary;
 
-      &:hover {
+      @media (hover: hover) {
+        &:hover {
+          cursor: pointer;
+          background-color: $color-primary-light;
+        }
+      }
+
+
+      &:active {
         background-color: $color-primary-light;
       }
     }

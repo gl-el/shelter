@@ -361,7 +361,7 @@ h6 {
 }
 
 .footer {
-  background: url(/SHELTER/assets/images/noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(../assets/images/noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 .footer h3 {
   color: #FFFFFF;
@@ -373,6 +373,15 @@ h6 {
   min-height: 46px;
   display: flex;
   align-items: center;
+}
+@media (hover: hover) {
+  .footer h4:hover {
+    cursor: pointer;
+    color: #F6F6F6;
+  }
+}
+.footer h4:active {
+  color: #F6F6F6;
 }
 .footer a {
   position: relative;
@@ -417,9 +426,6 @@ h6 {
     text-align: center;
   }
 }
-.footer__item h4:hover {
-  color: hsl(25, 93%, 88%);
-}
 .footer img {
   min-width: 0;
   min-height: 0;
@@ -452,7 +458,7 @@ h6 {
   padding-left: 40px;
 }
 .footer__adr::before {
-  content: url(/SHELTER/assets/icons/icon-marker.svg);
+  content: url(../assets/icons/icon-marker.svg);
   display: block;
   width: 22px;
   height: 32px;
@@ -469,7 +475,7 @@ h6 {
   padding-left: 60px;
 }
 .footer__mail::before {
-  content: url(/SHELTER/assets/icons/icon-email.svg);
+  content: url(../assets/icons/icon-email.svg);
   display: block;
   width: 22px;
   height: 32px;
@@ -481,7 +487,7 @@ h6 {
   padding-left: 60px;
 }
 .footer__tel::before {
-  content: url(/SHELTER/assets/icons/icon-phone.svg);
+  content: url(../assets/icons/icon-phone.svg);
   display: block;
   width: 22px;
   height: 32px;
@@ -528,9 +534,16 @@ h6 {
   color: #444444;
   background-color: transparent;
 }
-.btn:hover {
-  cursor: pointer;
-  border: 2px solid hsl(25, 93%, 88%);
+@media (hover: hover) {
+  .btn:hover {
+    cursor: pointer;
+    border: 2px solid hsl(25, 93%, 88%);
+  }
+}
+@media (hover: none) {
+  .btn:active {
+    border: 2px solid hsl(25, 93%, 88%);
+  }
 }
 .btn-round {
   width: 52px;
@@ -541,7 +554,13 @@ h6 {
   justify-content: center;
   flex-grow: 1;
 }
-.btn-round:hover {
+@media (hover: hover) {
+  .btn-round:hover {
+    cursor: pointer;
+    background-color: hsl(25, 93%, 88%);
+  }
+}
+.btn-round:active {
   background-color: hsl(25, 93%, 88%);
 }
 .btn-round_inactive {
@@ -564,7 +583,13 @@ h6 {
 .btn-rounded_colored {
   background-color: #F1CDB3;
 }
-.btn-rounded_colored:hover {
+@media (hover: hover) {
+  .btn-rounded_colored:hover {
+    cursor: pointer;
+    background-color: hsl(25, 93%, 88%);
+  }
+}
+.btn-rounded_colored:active {
   background-color: hsl(25, 93%, 88%);
 }
 
@@ -575,12 +600,23 @@ h6 {
   padding-bottom: 30px;
   border-radius: 9px;
 }
-.card:hover {
+@media (hover: hover) {
+  .card:hover {
+    cursor: pointer;
+    background-color: #F6F6F6;
+    box-shadow: 5px 5px 20px 10px rgba(13, 13, 13, 0.04);
+  }
+  .card:hover > .btn {
+    border: 2px solid hsl(25, 93%, 88%);
+    background-color: hsl(25, 93%, 88%);
+  }
+}
+.card:active {
   cursor: pointer;
   background-color: #F6F6F6;
   box-shadow: 5px 5px 20px 10px rgba(13, 13, 13, 0.04);
 }
-.card:hover > .btn {
+.card:active > .btn {
   border: 2px solid hsl(25, 93%, 88%);
   background-color: hsl(25, 93%, 88%);
 }
@@ -598,7 +634,6 @@ h6 {
   left: 0;
   top: 0;
   min-width: 300%;
-  transition: left 0.5s;
 }
 @media (max-width: 1024px) {
   .slider {

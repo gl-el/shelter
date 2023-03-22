@@ -5,8 +5,20 @@
   padding-bottom: 30px;
   border-radius: 9px;
   @extend %transition;
-
-  &:hover {
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      background-color: $color-light-l;
+      box-shadow: 5px 5px 20px 10px rgba(13, 13, 13, 0.04);
+  
+      >.btn {
+        border: 2px solid $color-primary-light;
+        background-color: $color-primary-light;
+      }
+    }
+  }
+  
+  &:active {
     cursor: pointer;
     background-color: $color-light-l;
     box-shadow: 5px 5px 20px 10px rgba(13, 13, 13, 0.04);
@@ -16,6 +28,7 @@
       background-color: $color-primary-light;
     }
   }
+  
 
   >.btn {
     margin-top: 1px;
@@ -34,7 +47,6 @@
   left: 0;
   top: 0;
   min-width: 300%;
-  transition: left 0.5s;
   @include desktop-s {
     min-width: 288%;
   }

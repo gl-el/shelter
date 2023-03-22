@@ -1,5 +1,5 @@
 .footer {
-  background: url(/SHELTER/assets/images/noise_lines_transparent@2X.png), $footer-gradient;
+  background: url(../assets/images/noise_lines_transparent@2X.png), $footer-gradient;
 
   h3 {
     color: $color-light-xl;
@@ -13,6 +13,17 @@
     display: flex;
     align-items: center;
     @extend %transition;
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+        color: $color-light-l;
+      }
+    }
+
+    &:active {
+      color: $color-light-l;
+    }
+
   }
 
   a {
@@ -51,14 +62,11 @@
     @include media-mobile {
       margin: 0 0 0 0;
       align-items: center;
+
       h3 {
         max-width: 250px;
         text-align: center;
       }
-    }
-
-    h4:hover {
-      color: $color-primary-light;
     }
   }
 
@@ -93,7 +101,7 @@
     padding-left: 40px;
 
     &::before {
-      content: url(/SHELTER/assets/icons/icon-marker.svg);
+      content: url(../assets/icons/icon-marker.svg);
       display: block;
       width: 22px;
       height: 32px;
@@ -111,7 +119,7 @@
     padding-left: 60px;
 
     &::before {
-      content: url(/SHELTER/assets/icons/icon-email.svg);
+      content: url(../assets/icons/icon-email.svg);
       display: block;
       width: 22px;
       height: 32px;
@@ -125,7 +133,7 @@
     padding-left: 60px;
 
     &::before {
-      content: url(/SHELTER/assets/icons/icon-phone.svg);
+      content: url(../assets/icons/icon-phone.svg);
       display: block;
       width: 22px;
       height: 32px;
@@ -137,7 +145,7 @@
 
   &__locations {
     margin-right: 21px;
-    
+
     @include media-tablet-m {
       margin-right: 50px;
     }

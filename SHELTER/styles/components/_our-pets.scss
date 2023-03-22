@@ -12,7 +12,10 @@
 
     @include media-mobile {
       padding: 42px 0;
-      gap: 41px;
+      gap: 9px;
+      >.btn {
+        margin-top: 33px;
+      }
     }
   }
 
@@ -31,10 +34,11 @@
 
     @include desktop-s {
       min-width: 730px;
+
       .card:nth-child(3n) {
         display: none;
       }
-      
+
     }
 
     @include media-tablet {
@@ -45,6 +49,7 @@
       .card:nth-child(3n-1) {
         display: none;
       }
+
       min-width: 90%;
       flex-wrap: wrap;
 
@@ -64,11 +69,15 @@
     @include media-mobile {
       min-width: 270px;
       margin-bottom: 0;
+
       .slider {
         height: 435px;
+      }
+
+      >.btn {
+        margin-top: -13px;
       }
     }
   }
 
 }
-

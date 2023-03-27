@@ -38,7 +38,7 @@
       overflow-y: hidden;
     }
 
-    @include media-tablet-m {
+    @media (max-width: calc($tablet-width - 1px)) {
       position: fixed;
       z-index: 2;
       height: 100vh;
@@ -88,7 +88,7 @@
     transform: rotate(90deg);
   }
 
-  @include media-tablet-m {
+  @media (max-width: calc($tablet-width - 1px)) {
     display: block;
   }
 
@@ -123,7 +123,7 @@
     background-color: $blackout;
     transition: transform 0.4s;
 
-    @include media-tablet-m {
+    @media (max-width: calc($tablet-width - 1px)) {
       display: block;
     }
   }

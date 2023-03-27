@@ -271,7 +271,7 @@ h6 {
 .header .nav_hidden {
   overflow-y: hidden;
 }
-@media (max-width: 738px) {
+@media (max-width: 767px) {
   .header .nav {
     position: fixed;
     z-index: 2;
@@ -317,7 +317,7 @@ h6 {
 .burger_active {
   transform: rotate(90deg);
 }
-@media (max-width: 738px) {
+@media (max-width: 767px) {
   .burger {
     display: block;
   }
@@ -351,7 +351,7 @@ h6 {
   background-color: rgba(41, 41, 41, 0.6);
   transition: transform 0.4s;
 }
-@media (max-width: 738px) {
+@media (max-width: 767px) {
   .burger__bg {
     display: block;
   }

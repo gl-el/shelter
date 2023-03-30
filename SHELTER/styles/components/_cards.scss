@@ -46,12 +46,12 @@
   position: relative;
   left: 0;
   top: 0;
-  min-width: 300%;
+  min-width: 295%;
   @include desktop-s {
     min-width: 288%;
   }
   @include media-tablet {
-    min-width: 302%;
+    min-width: 307%;
   }
 }
 

@@ -278,8 +278,7 @@ h6 {
     height: 100vh;
     width: 320px;
     top: 0;
-    right: 0;
-    transform: translateX(100vw);
+    right: -320px;
     background-color: #292929;
     display: flex;
     justify-content: center;
@@ -350,11 +349,6 @@ h6 {
   transform: translateX(100vw);
   background-color: rgba(41, 41, 41, 0.6);
   transition: transform 0.4s;
-}
-@media (max-width: 767px) {
-  .burger__bg {
-    display: block;
-  }
 }
 .burger_active ~ .burger__bg {
   transform: translateX(0);
@@ -633,7 +627,7 @@ h6 {
   position: relative;
   left: 0;
   top: 0;
-  min-width: 300%;
+  min-width: 295%;
 }
 @media (max-width: 1024px) {
   .slider {
@@ -642,7 +636,7 @@ h6 {
 }
 @media (max-width: 768px) {
   .slider {
-    min-width: 302%;
+    min-width: 307%;
   }
 }
 

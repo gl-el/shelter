@@ -5,5 +5,14 @@
 
 .wrapper {
   max-width: calc($desktop-width - 80px);
+  width: calc(100vw - 60px);
   margin: 0 auto;
+  
+  @include media-tablet {
+    max-width: calc($tablet-width - 60px);
+  }
+  @include media-mobile {
+    width: calc(100vw - 20px);
+    max-width: calc($mobile-l-width - 10px);
+  }
 }

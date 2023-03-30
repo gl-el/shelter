@@ -1,5 +1,4 @@
 .btn {
-  display: inline-block;
   box-sizing: border-box;
   border: 2px solid $color-primary;
   color: $color-dark-2xl;
@@ -7,9 +6,17 @@
   @extend %text-btn;
   @extend %transition;
 
-  &:hover {
-    cursor: pointer;
-    border: 2px solid $color-primary-light;
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      border: 2px solid $color-primary-light;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      border: 2px solid $color-primary-light;
+    }
   }
 
   &-round {
@@ -19,8 +26,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
 
-    &:hover {
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+        background-color: $color-primary-light;
+      }
+    }
+
+    &:active {
       background-color: $color-primary-light;
     }
 
@@ -35,6 +50,7 @@
     }
 
     &__arrow {
+      padding: 23px 19px;
       width: 14px;
       height: 6px;
     }
@@ -47,7 +63,15 @@
     &_colored {
       background-color: $color-primary;
 
-      &:hover {
+      @media (hover: hover) {
+        &:hover {
+          cursor: pointer;
+          background-color: $color-primary-light;
+        }
+      }
+
+
+      &:active {
         background-color: $color-primary-light;
       }
     }

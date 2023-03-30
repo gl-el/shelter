@@ -5,6 +5,25 @@
   &__wrapper {
     padding: 80px 0 99px;
     gap: 31px;
+    @include media-tablet {
+      flex-direction: column-reverse;
+      gap: 60px;
+    }
+    @include media-mobile {
+      gap: 41px; 
+      padding: 41px 0 42px;
+    }
+  }
+
+  &__img {
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    flex-shrink: 1;
+
+    @include media-mobile {
+      max-width: 87%;
+    }
   }
 
   &__content {
@@ -16,10 +35,20 @@
     a {
       color: $color-dark-l;
       text-decoration: none;
+      @include media-mobile {
+        width: 94%;
+      }
     }
 
     h3 {
       max-width: 300px;
+    }
+    @include media-mobile {
+      align-items: center;
+      h3 {
+        max-width: 210px;
+        text-align: center;
+      }
     }
   }
 
@@ -31,15 +60,48 @@
     border-radius: 9px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     @extend %transition;
-
-    &:hover {
+    
+    @media (hover: hover){
+      &:hover {
+        cursor: pointer;
+        background-color: $color-primary-light;
+      }
+    }
+    
+    &:active {
+      cursor: pointer;
       background-color: $color-primary-light;
     }
+
   }
 
   &__legal {
     color: $color-dark-m;
+  }
+
+  @include media-mobile {
+
+    >h4 {
+      @include font(1.5rem, 110%);
+      letter-spacing: 0.06em;
+    }
+
+    h5 {
+      letter-spacing: 0;
+      line-height: 160%;
+    }
+
+    .card__number {
+      @include font(1.5rem, 110%);
+      letter-spacing: 0.06em;
+    }
+
+    &__legal {
+      text-align: justify;
+      max-width: 93%;
+    }
   }
 
 }

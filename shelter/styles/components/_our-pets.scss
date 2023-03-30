@@ -1,0 +1,83 @@
+.pets {
+  background-color: $color-light-l;
+
+  h3 {
+    color: $color-dark-l;
+    text-align: center;
+  }
+
+  &__wrapper {
+    padding: 81px 0 100px;
+    gap: 25px;
+
+    @include media-mobile {
+      padding: 42px 0;
+      gap: 9px;
+      >.btn {
+        margin-top: 33px;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+    margin-bottom: 3px;
+    @extend %transition;
+
+    .btn {
+      flex-grow: 0;
+    }
+
+    @include desktop-s {
+      min-width: 730px;
+
+      .card:nth-child(3n) {
+        display: none;
+      }
+
+    }
+
+    @include media-tablet {
+      min-width: 600px;
+    }
+
+    @include media-tablet-m {
+      .card:nth-child(3n-1) {
+        display: none;
+      }
+
+      min-width: 90%;
+      flex-wrap: wrap;
+
+      >.btn {
+        margin-top: 20px;
+      }
+
+      >.btn:first-of-type {
+        margin-left: 58px;
+      }
+
+      >.btn:last-of-type {
+        margin-right: 58px;
+      }
+    }
+
+    @include media-mobile {
+      min-width: 270px;
+      margin-bottom: 0;
+
+      .slider {
+        height: 435px;
+      }
+
+      >.btn {
+        margin-top: -13px;
+      }
+    }
+  }
+
+}

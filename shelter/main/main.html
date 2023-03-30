@@ -6,14 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./main.css">
-  <link type="image/png" sizes="120x120" rel="icon" href="../assets/favicon.png">
+  <link type="image/png" sizes="120x120" rel="icon" href="/SHELTER/assets/favicon.png">
   <title>Cozy House</title>
-  <script src="index.js"></script>
 </head>
 
-<body>
+<body class="body">
   <header class="header wrapper">
-    <a href="javascript:;">
+    <a href="javascript:;" class="logo-link">
       <div class="logo">
         <h1>Cozy House</h1>
         <p class="subtitle">Shelter for pets in Boston</p>
@@ -23,16 +22,21 @@
       <ul class="nav__list">
         <li class="nav__item nav__item_active text-l"><a href="#" class="nav__link nav__link_active">About the
             shelter</a></li>
-        <li class="nav__item text-l"><a href="../our-pets/pets.html" class="nav__link">Our pets</a></li>
+        <li class="nav__item text-l"><a href="/SHELTER/our-pets/pets.html" class="nav__link">Our pets</a></li>
         <li class="nav__item text-l"><a href="#help" class="nav__link">Help the shelter</a></li>
         <li class="nav__item text-l"><a href="#footer" class="nav__link">Contacts</a></li>
       </ul>
     </nav>
+    <div class="burger">
+      <button class="burger__btn"><span class="burger__line"></span><span class="burger__line"></span><span
+          class="burger__line"></span></button>
+    </div>
+    <div class="burger__bg"></div>
   </header>
   <main>
     <section class="hero">
-      <div class="hero__wrapper layout-2-columns">
-        <div class="hero__content">
+      <div class="hero__wrapper wrapper">
+        <div class="hero__content layout-columns">
           <h2>Not only people <br>need a house</h2>
           <p class="text-l">We offer to give a chance to a little and nice puppy with an extremely wide and open heart.
             He
@@ -64,29 +68,62 @@
       <div class="pets__wrapper layout-column wrapper">
         <h3>Our friends who <br>are looking for a house</h3>
         <div class="pets__content">
-          <button class="btn btn-round"><img class="btn-round__arrow" src="../assets/icons/Arrow.svg"
+          <button class="btn btn-round" id="#slider-prev"><img class="btn-round__arrow" src="../assets/icons/Arrow.svg"
               alt="arrow"></button>
-          <div class="pets-cards__wrapper">
-            <div class="card layout-column">
-              <img class="card__img" src="../assets/images/katrine.png" alt="pet">
-              <h6>Katrine</h6>
-              <button class="btn btn-rounded">Learn more</button>
-            </div>
-            <div class="card layout-column">
-              <img class="pets-card__img" src="../assets/images/jennifer.png" alt="pet">
-              <h6>Jennifer</h6>
-              <button class="btn btn-rounded">Learn more</button>
-            </div>
-            <div class="card layout-column">
-              <img class="pets-card__img" src="../assets/images/woody.png" alt="pet">
-              <h6>Woody</h6>
-              <button class="btn btn-rounded">Learn more</button>
+          <div class="slider__wrapper">
+            <div class="slider">
+              <div class="card layout-column">
+                <img class="card__img" src="../assets/images/katrine.png" alt="pet">
+                <h6>Katrine</h6>
+                <button class="btn btn-rounded">Learn more</button>
+              </div>
+              <div class="card layout-column">
+                <img class="pets-card__img" src="../assets/images/jennifer.png" alt="pet">
+                <h6>Jennifer</h6>
+                <button class="btn btn-rounded">Learn more</button>
+              </div>
+              <div class="card layout-column">
+                <img class="pets-card__img" src="../assets/images/woody.png" alt="pet">
+                <h6>Woody</h6>
+                <button class="btn btn-rounded">Learn more</button>
+              </div>
+              <div class="card layout-column">
+                <img class="card__img" src="../assets/images/katrine.png" alt="pet">
+                <h6>Katrine</h6>
+                <button class="btn btn-rounded">Learn more</button>
+              </div>
+              <div class="card layout-column">
+                <img class="pets-card__img" src="../assets/images/jennifer.png" alt="pet">
+                <h6>Jennifer</h6>
+                <button class="btn btn-rounded">Learn more</button>
+              </div>
+              <div class="card layout-column">
+                <img class="pets-card__img" src="../assets/images/woody.png" alt="pet">
+                <h6>Woody</h6>
+                <button class="btn btn-rounded">Learn more</button>
+              </div>
+              <div class="card layout-column">
+                <img class="card__img" src="../assets/images/katrine.png" alt="pet">
+                <h6>Katrine</h6>
+                <button class="btn btn-rounded">Learn more</button>
+              </div>
+              <div class="card layout-column">
+                <img class="pets-card__img" src="../assets/images/jennifer.png" alt="pet">
+                <h6>Jennifer</h6>
+                <button class="btn btn-rounded">Learn more</button>
+              </div>
+              <div class="card layout-column">
+                <img class="pets-card__img" src="../assets/images/woody.png" alt="pet">
+                <h6>Woody</h6>
+                <button class="btn btn-rounded">Learn more</button>
+              </div>
             </div>
           </div>
-          <button class="btn btn-round btn-round_right"><img class="btn-round__arrow" src="../assets/icons/Arrow.svg"
+          <button class="btn btn-round btn-round_right" id="#slider-next"><img class="btn-round__arrow" src="../assets/icons/Arrow.svg"
               alt="arrow"></button>
         </div>
-        <a href="../our-pets/pets.html" class="btn btn-rounded btn-rounded_colored">Get to know the rest</a>
+        <a href="../our-pets/pets.html" class="btn btn-rounded btn-rounded_colored">Get to know the
+          rest</a>
       </div>
     </section>
     <section class="help" id="help">
@@ -177,6 +214,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>

@@ -5,8 +5,20 @@
   padding-bottom: 30px;
   border-radius: 9px;
   @extend %transition;
-
-  &:hover {
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      background-color: $color-light-l;
+      box-shadow: 5px 5px 20px 10px rgba(13, 13, 13, 0.04);
+  
+      >.btn {
+        border: 2px solid $color-primary-light;
+        background-color: $color-primary-light;
+      }
+    }
+  }
+  
+  &:active {
     cursor: pointer;
     background-color: $color-light-l;
     box-shadow: 5px 5px 20px 10px rgba(13, 13, 13, 0.04);
@@ -16,6 +28,7 @@
       background-color: $color-primary-light;
     }
   }
+  
 
   >.btn {
     margin-top: 1px;
@@ -26,8 +39,33 @@
   }
 }
 
-.pets-cards__wrapper {
+
+.slider {
   display: flex;
-  flex-wrap: wrap;
-  gap: 90px;
+  justify-content: space-around;
+  position: relative;
+  left: 0;
+  top: 0;
+  min-width: 295%;
+  @include desktop-s {
+    min-width: 288%;
+  }
+  @include media-tablet {
+    min-width: 307%;
+  }
+}
+
+.slider__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  @extend %transition;
+
+  @include media-tablet-m {
+    order: -1;
+  }
 }

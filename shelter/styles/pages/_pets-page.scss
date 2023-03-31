@@ -24,3 +24,9 @@ header {
 .burger__line {
   background-color: $color-black;
 }
+
+@media (max-width: calc($tablet-width - 1px)) {
+  .header .nav {
+    background-color: $color-light-xl;
+  }
+}

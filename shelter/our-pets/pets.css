@@ -278,7 +278,8 @@ h6 {
     height: 100vh;
     width: 320px;
     top: 0;
-    right: -320px;
+    right: 0;
+    transform: translateX(100vw);
     background-color: #292929;
     display: flex;
     justify-content: center;
@@ -349,6 +350,11 @@ h6 {
   transform: translateX(100vw);
   background-color: rgba(41, 41, 41, 0.6);
   transition: transform 0.4s;
+}
+@media (max-width: 767px) {
+  .burger__bg {
+    display: block;
+  }
 }
 .burger_active ~ .burger__bg {
   transform: translateX(0);
@@ -828,4 +834,10 @@ header {
 
 .burger__line {
   background-color: #000000;
+}
+
+@media (max-width: 767px) {
+  .header .nav {
+    background-color: #FFFFFF;
+  }
 }/*# sourceMappingURL=pets.css.map */

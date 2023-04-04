@@ -3,6 +3,7 @@ h2,
 h3,
 h4,
 h5,
+.modal ul,
 h6 {
   font-family: "Georgia", "Times New Roman", Times, serif;
 }
@@ -136,7 +137,7 @@ h4 {
   letter-spacing: 0.06em;
 }
 
-h5 {
+h5, .modal ul {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -799,6 +800,145 @@ h6 {
   }
   .pets__content > .btn {
     margin-top: -13px;
+  }
+}
+
+.modal__bg {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(41, 41, 41, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 900px;
+  position: relative;
+  height: auto;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .modal {
+    width: 82%;
+  }
+}
+@media (max-width: 738px) {
+  .modal {
+    width: 75%;
+  }
+  .modal h3 {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+}
+.modal__content {
+  max-width: 39%;
+  margin: 51px 19px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 1024px) {
+  .modal__content {
+    max-width: 41.5%;
+    margin: 11px 8px 0 0;
+    gap: 20px;
+  }
+}
+@media (max-width: 738px) {
+  .modal__content {
+    max-width: 92%;
+    margin: 10px;
+    align-items: center;
+  }
+}
+.modal h4 {
+  margin-top: 10px;
+}
+@media (max-width: 738px) {
+  .modal h4 {
+    text-align: center;
+  }
+}
+.modal h5, .modal ul {
+  line-height: 113%;
+}
+@media (max-width: 1024px) {
+  .modal h5, .modal ul {
+    font-size: 1.3rem;
+    line-height: 110%;
+  }
+}
+@media (max-width: 738px) {
+  .modal h5, .modal ul {
+    text-align: justify;
+  }
+}
+.modal > img {
+  width: 55.55%;
+  height: auto;
+  border-radius: 9px 0 0 9px;
+}
+@media (max-width: 738px) {
+  .modal > img {
+    display: none;
+  }
+}
+.modal ul {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+@media (max-width: 1024px) {
+  .modal ul {
+    font-size: 1.5rem;
+    gap: 5px;
+  }
+}
+@media (max-width: 738px) {
+  .modal ul {
+    align-self: flex-start;
+    margin-top: 3px;
+    gap: 6px;
+    width: 100%;
+  }
+}
+.modal li {
+  margin-left: 16px;
+  text-transform: capitalize;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+.modal li::marker {
+  color: #F1CDB3;
+}
+.modal span {
+  text-transform: lowercase;
+  font-weight: 400;
+}
+.modal button {
+  position: absolute;
+  top: -52px;
+  right: -42px;
+}
+@media (hover: hover) {
+  .modal button:hover {
+    transform: rotate(45deg);
+  }
+}
+@media (max-width: 738px) {
+  .modal button {
+    right: -30px;
   }
 }
 

@@ -1,0 +1,127 @@
+.modal__bg {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: $blackout;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 900px;
+  position: relative;
+  height: auto;
+  background-color: $color-light-s;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include desktop-s {
+    width: 82%;
+  }
+
+  @include media-tablet-m {
+    width: 75%;
+    h3 {
+      text-align: center;
+      font-size: 3.5rem;
+    }
+  }
+
+  &__content {
+    max-width: 39%;
+    margin: 51px 19px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include desktop-s {
+      max-width: 41.5%;
+      margin: 11px 8px 0 0; 
+      gap: 20px;
+    }
+    @include media-tablet-m {
+      max-width: 92%;
+      margin: 10px;
+      align-items: center;
+    }
+  }
+
+  h4 {
+    margin-top: 10px;
+    @include media-tablet-m {
+      text-align: center;
+    }
+  }
+
+  h5 {
+    line-height: 113%;
+    @include desktop-s {
+      font-size: 1.3rem;
+      line-height: 110%;
+    }
+    @include media-tablet-m {
+      text-align: justify;
+    }
+  }
+
+  >img {
+    width: 55.55%;
+    height: auto;
+    border-radius: 9px 0 0 9px;
+    @include media-tablet-m {
+      display: none;
+    }
+  }
+
+  ul {
+    @extend h5;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    @include desktop-s {
+      font-size: 1.5rem;
+      gap: 5px;
+    }
+    @include media-tablet-m {
+      align-self: flex-start;
+      margin-top: 3px;
+      gap: 6px;
+      width: 100%;
+    }
+  }
+
+  li {
+    margin-left: 16px;
+    text-transform: capitalize;
+    hyphens: auto;
+    &::marker {
+      color: $color-primary;
+    }
+  }
+
+  span {
+    text-transform: lowercase;
+    font-weight: 400;
+  }
+
+  button {
+    position: absolute;
+    top: -52px;
+    right: -42px;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: rotate(45deg);
+      }
+    }
+
+    @include media-tablet-m {
+      right: -30px;
+    }
+  }
+}

@@ -1,50 +1,77 @@
 import data from './pets.json' assert {type: 'json'};
 
-let pagesData = [];
 const PETSREPEAT = 6;
-let pageSize;
+const pagesData = shuffleData(generateData(PETSREPEAT, data));
 
 
 function getPageSize() {
-  if (window.screen.width > 768) {
+  let pageSize = 0;
+  if (window.screen.width > 1024) {
     pageSize = 8;
   } else if (window.screen.width > 737) {
     pageSize = 6;
   } else {
     pageSize = 3;
   }
+  return pageSize;
 }
 
-function shuffleArray(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
+function shuffleArray(srcArr) {
+  let shuffledArr = [...srcArr];
+  for (let i = shuffledArr.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+    [shuffledArr[i], shuffledArr[j]] = [shuffledArr[j], shuffledArr[i]];
   }
+  return shuffledArr;
+}
+
+function generateData(repeat, src) {
+  let genData = [];
+  let tempData = shuffleArray(src);
+  for (let i = 0; i < repeat; i++) {
+    const temp = [...tempData];
+    const firstCard = temp.shift();
+    temp.push(firstCard);
+    tempData = [];
+    tempData = [...temp]
+    genData.push(temp);
+  }
+  return genData.flat();
+}
+
+function shuffleData(data) {
+  const shuffledData = [];
+  for (let i = 0; i < data.length; i+=2) {
+    const tempArr = [data[i], data[i+1]];
+    shuffledData.push(shuffleArray(tempArr));
+  }
+  return shuffledData.flat();
 }
 
 function generatePages() {
-  const temp = [];
-  for (let i = 0; i < PETSREPEAT; i++) {
-    const tempData = [...data];
-    shuffleArray(tempData);
-    temp.push(...tempData);
+  const size = getPageSize();
+  const gallery = document.querySelector('.gallery-cards__wrapper');
+  for (let i = 0; i < size; i++){
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.classList.add('layout-column')
+    gallery.appendChild(card);
+    const cardImg = document.createElement('img');
+    cardImg.classList.add('card__img');
+    card.appendChild(cardImg);
+    const title = document.createElement('h6');
+    card.appendChild(title);
+    const btn = document.createElement('button');
+    btn.textContent = 'Learn more';
+    btn.classList.add('btn');
+    btn.classList.add('btn-rounded');
+    card.appendChild(btn);
   }
-
-  for (let i = 0; i <= (data.length * PETSREPEAT) / pageSize; i++) {
-    const pageData = [];
-    for (let i = 0; i < temp.length; i++) {
-      if (pageData.length === pageSize) { break; }
-      if (pageData.indexOf(temp[i]) === -1) { pageData.push(temp[i]) }
-    }
-    pageData.forEach((item) => { temp.splice(temp.indexOf(item), 1) })
-    pagesData.push(...pageData);
-  }
-  console.log(pagesData)
 }
-
+generatePages();
 function drawCards(j) {
   const cards = document.querySelectorAll(".card");
-  for (let i = 0; i < pageSize; i++) {
+  for (let i = 0; i < cards.length; i++) {
     const title = cards[i].querySelector('.card h6');
     const img = cards[i].querySelector('.card img');
 
@@ -52,6 +79,7 @@ function drawCards(j) {
     img.src = pagesData[i + j].img;
   }
 }
+drawCards(0)
 
 const btnFirst = document.querySelector('#first');
 const btnPrev = document.querySelector('#prev');
@@ -60,6 +88,7 @@ const btnNext = document.querySelector('#next');
 const btnLast = document.querySelector('#last');
 
 btnNext.addEventListener('click', () => {
+  const pageSize = getPageSize();
   let counter = +counterDisplay.textContent;
   counter++;
   toggleButtons(counter);
@@ -68,6 +97,7 @@ btnNext.addEventListener('click', () => {
 })
 
 btnPrev.addEventListener('click', () => {
+  const pageSize = getPageSize();
   let counter = +counterDisplay.textContent;
   counter--;
   toggleButtons(counter);
@@ -76,6 +106,7 @@ btnPrev.addEventListener('click', () => {
 })
 
 btnLast.addEventListener('click', () => {
+  const pageSize = getPageSize();
   let counter = pagesData.length / pageSize;
   toggleButtons(counter);
   drawCards(pageSize * (counter - 1));
@@ -83,6 +114,7 @@ btnLast.addEventListener('click', () => {
 })
 
 btnFirst.addEventListener('click', () => {
+  const pageSize = getPageSize();
   let counter = 1;
   toggleButtons(counter);
   drawCards(pageSize * (counter - 1));
@@ -90,6 +122,7 @@ btnFirst.addEventListener('click', () => {
 })
 
 function toggleButtons(counter) {
+  const pageSize = getPageSize();
   const length = pagesData.length / pageSize;
   if (counter === 1) {
     btnFirst.classList.add('btn-round_inactive');
@@ -110,7 +143,7 @@ function toggleButtons(counter) {
 }
 
 
-document.addEventListener('DOMContentLoaded', getPageSize(), generatePages(), drawCards(0));
+
 
 function resize(func) {
   let timer;
@@ -122,11 +155,15 @@ function resize(func) {
 
 
 window.addEventListener('resize', resize(function (e) {
-  pagesData = [];
-  getPageSize();
+  const pageSize = getPageSize();
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.remove();
+  })
   generatePages();
   let counter = 1;
   toggleButtons(counter);
   drawCards(pageSize * (counter - 1));
   counterDisplay.textContent = counter;
 }));
+

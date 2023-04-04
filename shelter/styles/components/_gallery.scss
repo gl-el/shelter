@@ -9,21 +9,11 @@
 
     @include media-tablet {
       width: 82%;
-
-      >:last-child,
-      >:nth-last-child(2) {
-        display: none;
-      }
     }
 
     @include media-tablet-m {
       justify-content: center;
       width: 70%;
-      >:nth-last-child(3),
-      >:nth-last-child(4),
-      >:nth-last-child(5) {
-        display: none;
-      }
     }
   }
 

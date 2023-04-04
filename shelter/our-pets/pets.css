@@ -674,20 +674,11 @@ h6 {
   .gallery-cards__wrapper {
     width: 82%;
   }
-  .gallery-cards__wrapper > :last-child,
-  .gallery-cards__wrapper > :nth-last-child(2) {
-    display: none;
-  }
 }
 @media (max-width: 738px) {
   .gallery-cards__wrapper {
     justify-content: center;
     width: 70%;
-  }
-  .gallery-cards__wrapper > :nth-last-child(3),
-  .gallery-cards__wrapper > :nth-last-child(4),
-  .gallery-cards__wrapper > :nth-last-child(5) {
-    display: none;
   }
 }
 .gallery__wrapper {

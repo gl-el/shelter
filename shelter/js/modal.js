@@ -1,25 +1,28 @@
 import data from '../js/pets.json' assert {type: 'json'};
 
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelector('.cards');
 const body = document.querySelector('.body');
 
-cards.forEach((card) => {
-  card.addEventListener('click', () => {
-    const name = card.querySelector('h6').textContent;
-    const cardData = data.find(item => item.name === name);
-    createCard(cardData);
-
-    const restPage = document.querySelector('.modal__bg');
-    restPage.addEventListener('click', (e) => {
-      console.log(e.target.className)
-      if (e.target.className === 'modal__bg' || e.target.className === 'btn btn-round'|| e.target.className === 'ico-close') {
-        restPage.remove();
-        body.classList.remove('body_hidden');
-      }
-    });
-  });
+cards.addEventListener('click', (e) => {
+if (e.target.classList[0] === 'card') {
+  showModal(e.target)
+} else if (e.target.parentNode.classList.value.includes('card')) {
+  showModal(e.target.parentNode)
+} 
 });
 
+function showModal(card) {
+  const name = card.querySelector('h6').textContent;
+  const cardData = data.find(item => item.name === name);
+  createCard(cardData);
+  const restPage = document.querySelector('.modal__bg');
+  restPage.addEventListener('click', (e) => {
+    if (e.target.className === 'modal__bg' || e.target.className === 'btn btn-round'|| e.target.className === 'ico-close') {
+      restPage.remove();
+      body.classList.remove('body_hidden');
+    }
+  });
+}
 
 function createCard(data) {
   const background = document.createElement('div');

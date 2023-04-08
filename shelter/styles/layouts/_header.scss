@@ -27,6 +27,9 @@
       &_active {
         pointer-events: none;
         border-bottom: 3px solid $color-primary;
+        @media (max-width: calc($tablet-width - 1px)) {
+          pointer-events: auto;
+        }
       }
 
       &:active {

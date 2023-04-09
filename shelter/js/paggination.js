@@ -1,8 +1,4 @@
-import data from './pets.json' assert {type: 'json'};
-
-const PETSREPEAT = 6;
-const pagesData = shuffleData(generateData(PETSREPEAT, data));
-
+//import data from './pets.json' assert {type: 'json'};
 
 function getPageSize() {
   let pageSize = 0;
@@ -41,8 +37,8 @@ function generateData(repeat, src) {
 
 function shuffleData(data) {
   const shuffledData = [];
-  for (let i = 0; i < data.length; i+=2) {
-    const tempArr = [data[i], data[i+1]];
+  for (let i = 0; i < data.length; i += 2) {
+    const tempArr = [data[i], data[i + 1]];
     shuffledData.push(shuffleArray(tempArr));
   }
   return shuffledData.flat();
@@ -51,7 +47,7 @@ function shuffleData(data) {
 function generatePages() {
   const size = getPageSize();
   const gallery = document.querySelector('.gallery-cards__wrapper');
-  for (let i = 0; i < size; i++){
+  for (let i = 0; i < size; i++) {
     const card = document.createElement('div');
     card.classList.add('card');
     card.classList.add('layout-column')
@@ -68,8 +64,8 @@ function generatePages() {
     card.appendChild(btn);
   }
 }
-generatePages();
-function drawCards(j) {
+
+function drawCards(j, pagesData) {
   const cards = document.querySelectorAll(".card");
   for (let i = 0; i < cards.length; i++) {
     const title = cards[i].querySelector('.card h6');
@@ -79,51 +75,15 @@ function drawCards(j) {
     img.src = pagesData[i + j].img;
   }
 }
-drawCards(0)
 
-const btnFirst = document.querySelector('#first');
-const btnPrev = document.querySelector('#prev');
-const counterDisplay = document.querySelector('.gallery__counter h4');
-const btnNext = document.querySelector('#next');
-const btnLast = document.querySelector('#last');
-
-btnNext.addEventListener('click', () => {
+function toggleButtons(counter, pages) {
   const pageSize = getPageSize();
-  let counter = +counterDisplay.textContent;
-  counter++;
-  toggleButtons(counter);
-  drawCards(pageSize * (counter - 1));
-  counterDisplay.textContent = counter;
-})
-
-btnPrev.addEventListener('click', () => {
-  const pageSize = getPageSize();
-  let counter = +counterDisplay.textContent;
-  counter--;
-  toggleButtons(counter);
-  drawCards(pageSize * (counter - 1));
-  counterDisplay.textContent = counter;
-})
-
-btnLast.addEventListener('click', () => {
-  const pageSize = getPageSize();
-  let counter = pagesData.length / pageSize;
-  toggleButtons(counter);
-  drawCards(pageSize * (counter - 1));
-  counterDisplay.textContent = counter;
-})
-
-btnFirst.addEventListener('click', () => {
-  const pageSize = getPageSize();
-  let counter = 1;
-  toggleButtons(counter);
-  drawCards(pageSize * (counter - 1));
-  counterDisplay.textContent = counter;
-})
-
-function toggleButtons(counter) {
-  const pageSize = getPageSize();
-  const length = pagesData.length / pageSize;
+  const length = pages.length / pageSize;
+  const btnFirst = document.querySelector('#first');
+  const btnPrev = document.querySelector('#prev');
+  const counterDisplay = document.querySelector('.gallery__counter h4');
+  const btnNext = document.querySelector('#next');
+  const btnLast = document.querySelector('#last');
   if (counter === 1) {
     btnFirst.classList.add('btn-round_inactive');
     btnPrev.classList.add('btn-round_inactive');
@@ -142,9 +102,6 @@ function toggleButtons(counter) {
   }
 }
 
-
-
-
 function resize(func) {
   let timer;
   return function (ev) {
@@ -152,18 +109,3 @@ function resize(func) {
     timer = setTimeout(func, 100, ev);
   };
 }
-
-
-window.addEventListener('resize', resize(function (e) {
-  const pageSize = getPageSize();
-  const cards = document.querySelectorAll('.card');
-  cards.forEach(card => {
-    card.remove();
-  })
-  generatePages();
-  let counter = 1;
-  toggleButtons(counter);
-  drawCards(pageSize * (counter - 1));
-  counterDisplay.textContent = counter;
-}));
-

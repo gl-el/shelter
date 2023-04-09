@@ -1,4 +1,4 @@
-import data from './pets.json' assert {type: 'json'};
+/*import data from './pets.json' assert {type: 'json'};*/
 
 function getRandomNumber(max) {
   return Math.floor(Math.random() * max)
@@ -6,7 +6,7 @@ function getRandomNumber(max) {
 
 function generateCards() {
   const slider = document.querySelector('.slider');
-  for (let i=0; i<9; i++) {
+  for (let i = 0; i < 9; i++) {
     const card = document.createElement('div');
     card.classList.add('card');
     card.classList.add('layout-column')
@@ -28,27 +28,27 @@ let currNumbers = [];
 let prevNumbers = [];
 let nextNumbers = [];
 
-function shuffleDataIndexes(cardsQuantity) {
-  getCurrIndexes(cardsQuantity);
-  getPrevIndexes(cardsQuantity);
-  getNextIndexes(cardsQuantity);
+function shuffleDataIndexes(cardsQuantity, data) {
+  getCurrIndexes(cardsQuantity, data);
+  getPrevIndexes(cardsQuantity, data);
+  getNextIndexes(cardsQuantity, data);
 }
 
-function getCurrIndexes(cardsQuantity) {
+function getCurrIndexes(cardsQuantity, data) {
   while (currNumbers.length < cardsQuantity / 3) {
     const rNum = getRandomNumber(data.length)
     if (currNumbers.indexOf(rNum) === -1) currNumbers.push(rNum)
   }
 }
 
-function getPrevIndexes(cardsQuantity) {
+function getPrevIndexes(cardsQuantity, data) {
   while (prevNumbers.length < cardsQuantity / 3) {
     const rNum = getRandomNumber(data.length)
     if (currNumbers.indexOf(rNum) === -1 && prevNumbers.indexOf(rNum) === -1) prevNumbers.push(rNum)
   }
 }
 
-function getNextIndexes(cardsQuantity) {
+function getNextIndexes(cardsQuantity, data) {
   while (nextNumbers.length < cardsQuantity / 3) {
     const rNum = getRandomNumber(data.length)
     if (currNumbers.indexOf(rNum) === -1 && nextNumbers.indexOf(rNum) === -1) nextNumbers.push(rNum)
@@ -57,7 +57,7 @@ function getNextIndexes(cardsQuantity) {
 
 
 
-function drawCards() {
+function drawCards(data) {
   const cards = document.querySelectorAll('.card');
   for (let i = 0; i < cards.length; i++) {
     const title = cards[i].querySelector('.card h6');
@@ -67,55 +67,39 @@ function drawCards() {
       img.src = data[prevNumbers[i]].img;
     }
     if (i >= 3 && i < 6) {
- 
+
       title.textContent = data[currNumbers[i - 3]].name;
       img.src = data[currNumbers[i - 3]].img;
     }
     if (i >= 6) {
 
-      title.textContent = data[nextNumbers[i-6]].name;
-      img.src = data[nextNumbers[i-6]].img;
+      title.textContent = data[nextNumbers[i - 6]].name;
+      img.src = data[nextNumbers[i - 6]].img;
     }
   }
 }
 
-const slider = document.querySelector('.slider');
+function slideNext(data) {
+  
+}
 
-const sliderNext = document.getElementById('#slider-next');
-slider.style.transform = 'translateX(0)';
-let direction = '';
-sliderNext.addEventListener('click', () => {
-  slider.style.transition = 'transform 0.6s';
-  slider.style.transform = 'translateX(-33.3%)';
-  direction = 'next';
-  setTimeout(updateCurrent, 600);
-})
-const sliderPrev = document.getElementById('#slider-prev');
-sliderPrev.addEventListener('click', () => {
-  slider.style.transition = 'transform 0.6s';
-  slider.style.transform = 'translateX(33.3%)';
-  direction = 'prev';
-  setTimeout(updateCurrent, 600);
-})
-
-function updateCurrent() {
+function updateCurrent(data, element, direction) {
   if (direction === 'prev') {
     const temp = [...prevNumbers];
     nextNumbers = [...currNumbers];
     currNumbers = [...temp];
     prevNumbers = [];
-    getPrevIndexes(9);
+    getPrevIndexes(9, data);
   }
   if (direction === 'next') {
     const temp = [...nextNumbers];
     prevNumbers = [...currNumbers];
     currNumbers = [...temp];
     nextNumbers = [];
-    getNextIndexes(9);
+    getNextIndexes(9, data);
   }
-  slider.style.transition = '';
-  slider.style.transform = 'translateX(0)';
-  drawCards()
+  element.style.transition = '';
+  element.style.transform = 'translateX(0)';
+  drawCards(data)
 }
 
-document.addEventListener('DOMContentLoaded', generateCards(), shuffleDataIndexes(9), drawCards())

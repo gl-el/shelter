@@ -1,23 +1,13 @@
-import data from '../js/pets.json' assert {type: 'json'};
+//import data from '../js/pets.json' assert {type: 'json'};
 
-const cards = document.querySelector('.cards');
-const body = document.querySelector('.body');
-
-cards.addEventListener('click', (e) => {
-if (e.target.classList[0] === 'card') {
-  showModal(e.target)
-} else if (e.target.parentNode.classList.value.includes('card')) {
-  showModal(e.target.parentNode)
-} 
-});
-
-function showModal(card) {
+function showModal(card, data) {
+  const body = document.querySelector('.body');
   const name = card.querySelector('h6').textContent;
   const cardData = data.find(item => item.name === name);
   createCard(cardData);
   const restPage = document.querySelector('.modal__bg');
   restPage.addEventListener('click', (e) => {
-    if (e.target.className === 'modal__bg' || e.target.className === 'btn btn-round'|| e.target.className === 'ico-close') {
+    if (e.target.className === 'modal__bg' || e.target.className === 'btn btn-round' || e.target.className === 'ico-close') {
       restPage.remove();
       body.classList.remove('body_hidden');
     }
@@ -25,6 +15,7 @@ function showModal(card) {
 }
 
 function createCard(data) {
+  const body = document.querySelector('.body');
   const background = document.createElement('div');
   background.className = 'modal__bg';
   body.appendChild(background);
